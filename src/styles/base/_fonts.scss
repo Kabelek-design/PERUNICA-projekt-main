@@ -1,0 +1,20 @@
+/**
+ * Fonts
+*/
+
+@font-face {
+  font-family: 'DINP-R';
+  src: url("../fonts/DINPro-Regular.eot?") format("eot"),
+  url("../fonts/DINPro-Regular.woff") format("woff"),
+  url("../fonts/DINPro-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
+
+$any-pro: 'Anonymous Pro', monospace;
+$im-fe: 'IM Fell English', serif;
