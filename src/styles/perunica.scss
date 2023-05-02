@@ -1,177 +1,626 @@
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
+@font-face {
+    font-family: "IM Fell English";
+    src: url("/fonts/IMFellEnglish-Regular.ttf") format("truetype");
+    unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F;
+    font-weight: normal;
+    font-style: normal;
+  }
 // X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
 
 // Small devices (landscape phones, 576px and up)
-@media (max-width: 576px) {}
+@media (max-width: 776px) {}
 
 // Medium devices (tablets, 768px and up)
-@media (max-width: 768px) {}
+@media screen and (min-width: 777px) and (max-width: 991px) {}
 
 // Large devices (desktops, 992px and up)
-@media (max-width: 992px) {}
+@media screen and (min-width: 992px) and (max-width: 1199px) {}
 
 // X-Large devices (large desktops, 1200px and up)
-@media (max-width: 1200px) {}
+@media screen and (min-width: 1200px) and (max-width: 1399px) {}
 
 // XX-Large devices (larger desktops, 1400px and up)
-@media (max-width: 1400px) {}
+@media screen and (min-width: 1400px) {
 
-body {
-    background-image: url(../images/design/page-bg.png);
-    color: black;
-    font-family: 'Anonymous Pro', monospace;
-}
-
-header{
-    height: 1265.74px;
-    background-image: url(../images/design/perun.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position-y: bottom;
-}
-
-#navbar {
-    font-weight: bold;
-    font-size: 18px;
-    display: flex;
-    flex-wrap: inherit;
-    align-items: center;
-    justify-content: space-evenly;
-    align-content: space-between;
-    a:visited{
+    body {
+        background-image: url(../images/design/page-bg.png);
         color: black;
+        font-family: 'Anonymous Pro', serif;
     }
 
-}
+    header {
+        height: 1265.74px;
+        background-image: url(../images/design/perun.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position-y: bottom;
+    }
 
-#linia {
-    height: 2px;
-    width: 120px;
-    margin-top: 14px;
-}
+    #navbar {
+        font-weight: bold;
+        font-size: 18px;
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: space-evenly;
+        align-content: space-between;
 
-.font-im1{
-    font-family: 'IM Fell English', serif;
-    font-size: 110px;
-    color: #BC8417;
-    font-style: italic;
-    letter-spacing: -1.5px;
-}
+        a:visited {
+            color: black;
+        }
 
-.font-im2{
-    line-height: 61.4%;
-    color: black;
-    font-size: 174px;
-    letter-spacing: -3px;
-    font-family: 'IM Fell English', serif;
-}
+    }
 
-.opis1-index{
-    font-size: 22px;
-}
 
-b{font-weight: bold;}
+    #linia {
+        height: 2px;
+        width: 120px;
+        margin-top: 14px;
+    }
 
-.button1-index{
-	background-color:#BC8417;
-	border:1px solid #BC8417;
-	display:inline-block;
-	cursor:pointer;
-	color:white;
-	font-family:Arial;
-	font-size:18px;
-	font-weight:bold;
-	padding:15px 38px;
-    letter-spacing: -0.5px;
-	text-decoration:none;
-}
-.button2-index{
-	background-color:transparent;
-	border:1px solid black;
-	display:inline-block;
-	cursor:pointer;
-	color:black;
-	font-family:Arial;
-	font-size:18px;
-	font-weight:bold;
-    letter-spacing: -0.5px;
-	padding:15px 38px;
-	text-decoration:none;
-}
+    .font-im1 {
+        font-family: "IM Fell English";
+        src: url("/fonts/IMFellEnglish-Regular.ttf") format("truetype");
+        unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F;
+        font-size: 110px;
+        color: #BC8417;
+        font-style: italic;
+        letter-spacing: -1.5px;
+    }
 
-.button2-index:hover{
-    background-color: black;
-    color: white;
-    transition: 0.5s;
-}
-.button1-index:hover{
-    background-color: #ffffff;
-    border-color: #BC8417;
-    color: #BC8417;
-    transition: 0.5s;
-}
+    .font-im2 {
+        line-height: 61.4%;
+        color: black;
+        font-size: 174px;
+        letter-spacing: -3px;
+            font-family: "IM Fell English";
+    src: url("/fonts/IMFellEnglish-Regular.ttf") format("truetype");
+    unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F;
+    }
 
-.font1-index{
-    font-size: 26px;
-    color: #ffffff;
-    font-family: 'IM Fell English', serif;
-}
-.font2-index{
-    font-size: 26px;
-    color: #ffffff;
-    font-family: 'IM Fell English', serif;
-}
+    .opis1-index {
+        font-size: 22px;
+    }
 
-.dot{
-    color: #BC8417;
-}
+    b {
+        font-weight: bold;
+    }
 
-main{
-    background-color: #0f0c07;
-    height: 1251px;
-}
+    .button1-index {
+        background-color: #BC8417;
+        border: 1px solid #BC8417;
+        display: inline-block;
+        cursor: pointer;
+        color: white;
+        font-family: Arial;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 15px 38px;
+        letter-spacing: -0.5px;
+        text-decoration: none;
+    }
 
-.font-im3{
-    font-size: 157px;
-    letter-spacing: -1.5px;
-    font-family: 'IM Fell English', serif;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px #CCC2B6;
-    z-index: 10;
-    transform: rotate(-90deg);
-    position: absolute;
-    top: 455px;
-    right: 99px;
-}
+    .button2-index {
+        background-color: transparent;
+        border: 1px solid black;
+        display: inline-block;
+        cursor: pointer;
+        color: black;
+        font-family: Arial;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: -0.5px;
+        padding: 15px 38px;
+        text-decoration: none;
+    }
 
-#korzen{
-    position: absolute;
-    top: 201px;
-    right: 300px;
-    z-index: 11;
-}
+    .button2-index:hover {
+        background-color: black;
+        color: white;
+        transition: 0.5s;
+    }
 
-.absolute1{
-    position: static;
-    overflow: hidden;
-}
-.absolute2{
-    position: absolute;
-    display: block;
-    overflow: visible;
-    margin-top: -1533px;
-    margin-left: 862px;
-}
+    .button1-index:hover {
+        background-color: #ffffff;
+        border-color: #BC8417;
+        color: #BC8417;
+        transition: 0.5s;
+    }
 
-.absolute3{
-    position: static;
-}
-.absolute4{
-    position: absolute;
-    display: block;
-    overflow: visible;
-    margin-top: -1533px;
-    margin-left: 862px;
+
+    .dot {
+        color: #BC8417;
+    }
+
+    main {
+        background-color: #0f0c07;
+        height: 1251px;
+        background-image: url(../images/content/galazka2-1.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+        background-position-x: right;
+
+    }
+
+    .font-im3 {
+        font-size: 157px;
+        letter-spacing: -1.5px;
+        font-family: 'IM Fell English', serif;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px #CCC2B6;
+        z-index: 10;
+        transform: rotate(-90deg);
+        position: relative;
+        top: -1582px;
+        left: 552px;
+
+    }
+
+    #korzen {
+        position: relative;
+        z-index: 11;
+        top: -1597px;
+        left: 1114px;
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+    #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+
+    #container1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+
+    #container img {
+        position: relative;
+    }
+
+    .absolute1 {
+        z-index: 1;
+        margin-left: -220px;
+        margin-top: 243px;
+    }
+
+    .absolute2 {
+        z-index: 2;
+        margin-left: -220px;
+        margin-top: 123px;
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+    .absolute3 {
+        z-index: 3;
+        margin-left: -220px;
+    }
+
+    .absolute4 {
+        z-index: 4;
+        margin-left: -280px;
+        margin-top: -653px;
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+    #container1 .font1-index .font2-index {
+        position: relative;
+    }
+
+    .font1-index {
+        font-size: 26px;
+        margin-top: 240px;
+        margin-left: 555px;
+        color: #CCC2B6;
+        font-family: 'IM Fell English', serif;
+    }
+
+    .font2-index {
+        margin-left: -385px;
+        margin-top: 295px;
+        font-size: 26px;
+        color: #CCC2B6;
+        font-family: 'IM Fell English', serif;
+    }
+
+    #oferta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 70px;
+        position: relative;
+        top: 120px;
+    }
+
+    .hexagon {
+        position: relative;
+        width: 100%;
+        top: 180px;
+        padding-bottom: 33.6%;
+        /* height is 100% * sin(60deg) / cos(60deg) */
+        overflow: hidden;
+
+
+    }
+
+    .hexagon img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: auto;
+    }
+
+    .hexagon:hover img {
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+
+
+    #dziejesie {
+        font-family: 'IM FELL English';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 43px;
+        line-height: 113.4%;
+        /* identical to box height, or 49px */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        letter-spacing: -1.5px;
+    }
+
+    #aktualnosci {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 70px;
+        line-height: 100%;
+        text-align: center;
+        letter-spacing: -3px;
+    }
+
+    #runa1 {
+        position: absolute;
+        left: 106px;
+        top: 2863px;
+        z-index: -2;
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+    }
+
+    #runa2 {
+        position: absolute;
+        right: 170px;
+        top: 2670px;
+        z-index: -2;
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+    #galazka {
+        position: absolute;
+        left: -57px;
+        top: 2587px;
+        z-index: -1;
+    }
+
+    #misa {
+        position: absolute;
+        right: 110px;
+        top: 2780px;
+        z-index: -1;
+    }
+
+    #ac62e217_1612293957 {
+        z-index: 10;
+        margin-top: 100px;
+    }
+
+    .fb-like {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    #updates {
+        margin-top: 286px;
+        margin-bottom: 168px;
+    }
+
+    #welesowy {
+        height: 672px;
+        background-image: url(../images/content/bg-welesowy.jpg);
+    }
+
+    .welesowy {
+        font-family: 'IM FELL English';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 70px;
+        line-height: 113.4%;
+        /* or 79px */
+
+        text-align: center;
+        letter-spacing: -1.5px;
+
+        color: #EE2F41;
+    }
+
+    #logo-byka {
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+
+    #talk {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        color: #ffffff;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 70px;
+        line-height: 100%;
+        text-align: center;
+        letter-spacing: -3px;
+    }
+
+    .box-footer {
+        padding-top: 94px;
+    }
+
+    .weles-footer {
+        padding-top: 94px;
+    }
+
+    footer {
+        background-color: #070603;
+
+        span {
+            opacity: 50%;
+        }
+    }
+
+    .opis {
+        font-family: 'Anonymous Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 36px;
+        color: #FFFFFF;
+        text-align: center;
+        letter-spacing: -0.5px;
+    }
+
+    .col {
+        line-height: 36px;
+        font-size: 18px;
+    }
+
+    .button3-index {
+        background-color: transparent;
+        border: 1px solid rgb(255, 255, 255);
+        display: inline-block;
+        cursor: pointer;
+        font-family: 'Anonymous Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 29px;
+        /* identical to box height, or 161% */
+        
+        letter-spacing: -0.5px;
+        
+        /* Colors/White */
+        
+        color: #FFFFFF;
+        padding: 15px 38px;
+        text-decoration: none;
+    }
+
+    .button3-index:hover {
+        background-color: #EE2F41;
+        color: white;
+        transition: 0.5s;
+        border: 1px solid #EE2F41;
+    }
+    .bulwa{
+        position: relative;
+        bottom: 300px;
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+    .runa-mz{
+
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
 }
