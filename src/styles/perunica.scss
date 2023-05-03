@@ -53,7 +53,80 @@
         }
 
     }
+    .bg-info{
+        background-image: url(../images/content/if-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 608px;
+    }
+    .bg-odkryj{
+        background-image: url(../images/content/odkryj-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 608px;
+    }
+    .bg-kulinarny{
+        background-image: url(../images/content/szlak-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 608px;
+    }
+    .bg-kontakt{
+        background-image: url(../images/content/szlak-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 608px;
+    }
+    .bg-team{
+        background-image: url(../images/content/szlak-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 608px;
+    }
+    .bg-czarownice{
+        background-image: url(../images/content/czarownice-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 69%;
+        height: 608px;
+    }
 
+    #navbar-info {
+        font-weight: bold;
+        font-size: 18px;
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        color: white;
+        justify-content: space-evenly;
+        align-content: space-between;
+
+        a:visited {
+            color: white;
+        }
+
+    }
+
+    #powrot-oferta{
+        padding: 14px 32px;
+    padding-left: 24px;
+    margin-left: 66px;
+    margin-right: 24px;
+    background-color: transparent;
+    color: #fff;
+    font-family: "Anonymous Pro",monospace;
+    font-weight: normal;
+    border: 1px solid #fff;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+    #powrot-oferta:hover{
+        background-color: #ffffff92;
+        border: 1px #ffffff92;
+        color: #000000;
+    }
 
     #linia {
         height: 2px;

@@ -10,6 +10,7 @@ let htmlPageNames = ['demo-index',
                     'kontakt',
                     'odkryjperunice',
                     'szlak-kulinarny',
+                    'szlak-czarownic',
                     'team-building',
                     'pdfs'];
 let multipleHtmlPlugins = htmlPageNames.map(name => {
