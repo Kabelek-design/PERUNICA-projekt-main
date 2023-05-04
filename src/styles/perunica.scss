@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
-@font-face {
-    font-family: "IM Fell English";
-    src: url("/fonts/IMFellEnglish-Regular.ttf") format("truetype");
-    unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F;
-    font-weight: normal;
-    font-style: normal;
-  }
 // X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
 
@@ -45,6 +38,7 @@
         display: flex;
         flex-wrap: inherit;
         align-items: center;
+        z-index: 1111;
         justify-content: space-evenly;
         align-content: space-between;
 
@@ -53,37 +47,230 @@
         }
 
     }
-    .bg-info{
+
+    // navbar podstron
+    #navbar-info {
+        background-color: #00000063;
+        font-weight: bold;
+        font-size: 18px;
+        position: fixed;
+        display: flex;
+        z-index: 1111;
+        flex-wrap: inherit;
+        align-items: center;
+        color: white;
+        justify-content: space-evenly;
+        align-content: space-between;
+
+    }
+
+    .bg-info {
         background-image: url(../images/content/if-bg.png);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
     }
-    .bg-odkryj{
+
+    #img-if2 {
+        margin-left: 150px;
+        position: relative;
+        bottom: 100px;
+    }
+
+    #img-if1 {
+        padding: 80px;
+        font-family: 'Anonymous Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        /* or 178% */
+
+        letter-spacing: -1px;
+
+        /* Colors/Black */
+
+        color: #0F0C07;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    .info-turystyczna {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+    }
+
+    .info-turystyczna3 {
+        background-image: url(../images/content/bg-if.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        #colcol {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+    }
+
+    .info-turystyczna2 {
+        background-color: #fff;
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+
+        span {
+            font-weight: 700;
+        }
+
+        p {
+            font-family: 'Anonymous Pro';
+            font-style: normal;
+            font-weight: 400;
+            padding-top: 24px;
+            font-size: 18px;
+            line-height: 22px;
+            /* or 122% */
+
+            text-align: center;
+            letter-spacing: -1.5px;
+
+            /* Colors/Black */
+
+            color: #0F0C07;
+        }
+    }
+
+    .opis-zwiedzanie {
+        font-family: 'Anonymous Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        /* or 178% */
+
+        text-align: center;
+        letter-spacing: -0.5px;
+
+        /* Colors/White */
+
+        color: #FFFFFF;
+    }
+
+    #zwiedzanie {
+        font-style: italic;
+        font-weight: 400;
+        font-size: 70px;
+        line-height: 113.4%;
+        /* or 79px */
+
+        text-align: center;
+        letter-spacing: -1.5px;
+
+        /* Colors/Gold2 */
+
+        color: #BC8417;
+    }
+
+    .bg-odkryj {
         background-image: url(../images/content/odkryj-bg.png);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
     }
-    .bg-kulinarny{
+
+    .bg-kulinarny {
+        background-image: url(../images/content/szlak-kul.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 608px;
+    }
+
+    .bg-kontakt {
         background-image: url(../images/content/szlak-bg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
     }
-    .bg-kontakt{
-        background-image: url(../images/content/szlak-bg.jpg);
+
+    // #kontakt-info{
+    //     justify-content: space-evenly !important;
+    //     display: flex !important;
+    //     margin: 50px;
+    // }
+    #kontakt-opis {
+
+        font-family: 'Anonymous Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 36px;
+        /* or 200% */
+
+        letter-spacing: -0.5px;
+
+        /* Colors/Black */
+
+        color: #0F0C07;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    .images-kontakt img {
+        position: absolute;
+    }
+
+    .image1 {
+        left: 120px;
+        top: 500px;
+    }
+
+    .image2 {
+        right: 40px;
+        top: 380px;
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+    .bg-team {
+        background-image: url(../images/content/team-build.png);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position-y: 49%;
         height: 608px;
     }
-    .bg-team{
-        background-image: url(../images/content/szlak-bg.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 608px;
-    }
-    .bg-czarownice{
+
+    .bg-czarownice {
         background-image: url(../images/content/czarownice-bg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -91,38 +278,25 @@
         height: 608px;
     }
 
-    #navbar-info {
-        font-weight: bold;
-        font-size: 18px;
-        display: flex;
-        flex-wrap: inherit;
-        align-items: center;
-        color: white;
-        justify-content: space-evenly;
-        align-content: space-between;
 
-        a:visited {
-            color: white;
-        }
 
-    }
-
-    #powrot-oferta{
+    #powrot-oferta {
         padding: 14px 32px;
-    padding-left: 24px;
-    margin-left: 66px;
-    margin-right: 24px;
-    background-color: transparent;
-    color: #fff;
-    font-family: "Anonymous Pro",monospace;
-    font-weight: normal;
-    border: 1px solid #fff;
-    font-size: 15px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.3s;
+        padding-left: 24px;
+        margin-left: 66px;
+        margin-right: 24px;
+        background-color: transparent;
+        color: #fff;
+        font-family: "Anonymous Pro", monospace;
+        font-weight: normal;
+        border: 1px solid #fff;
+        font-size: 15px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.3s;
     }
-    #powrot-oferta:hover{
+
+    #powrot-oferta:hover {
         background-color: #ffffff92;
         border: 1px #ffffff92;
         color: #000000;
@@ -149,9 +323,9 @@
         color: black;
         font-size: 174px;
         letter-spacing: -3px;
-            font-family: "IM Fell English";
-    src: url("/fonts/IMFellEnglish-Regular.ttf") format("truetype");
-    unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F;
+        font-family: "IM Fell English";
+        src: url("/fonts/IMFellEnglish-Regular.ttf") format("truetype");
+        unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F;
     }
 
     .opis1-index {
@@ -627,11 +801,11 @@
         font-size: 18px;
         line-height: 29px;
         /* identical to box height, or 161% */
-        
+
         letter-spacing: -0.5px;
-        
+
         /* Colors/White */
-        
+
         color: #FFFFFF;
         padding: 15px 38px;
         text-decoration: none;
@@ -643,7 +817,8 @@
         transition: 0.5s;
         border: 1px solid #EE2F41;
     }
-    .bulwa{
+
+    .bulwa {
         position: relative;
         bottom: 300px;
         -webkit-animation: action 1s infinite alternate;
@@ -670,7 +845,7 @@
         }
     }
 
-    .runa-mz{
+    .runa-mz {
 
         -webkit-animation: action 1s infinite alternate;
         animation: action 1s infinite alternate;
