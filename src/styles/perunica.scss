@@ -103,18 +103,195 @@
         background-color: #fff;
     }
 
+    .info-turystyczna4 {
+        h1 {
+            margin-top: 170px;
+        }
+    }
+
+    #card {
+        width: 550px;
+
+        .card-title {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 13%;
+            left: 50%;
+            font-family: 'IM FELL English';
+            font-style: italic;
+            font-weight: 400;
+            font-size: 42px;
+            line-height: 100%;
+            /* identical to box height, or 42px */
+            text-align: center;
+            letter-spacing: -1.5px;
+            /* Colors/White */
+            color: #FFFFFF;
+            text-shadow: 0px 4px 14px #000000;
+            width: 100%;
+
+        }
+    }
+
+    .card {
+        position: relative;
+        width: 400px;
+        background-color: rgba(255, 255, 255, 0.473);
+    }
+
+    .card img {
+        width: 100%;
+        display: block;
+    }
+
+    .card-title {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 23%;
+        left: 50%;
+        font-family: 'IM FELL English';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 42px;
+        line-height: 100%;
+        /* identical to box height, or 42px */
+
+        text-align: center;
+        letter-spacing: -1.5px;
+
+        /* Colors/White */
+
+        color: #FFFFFF;
+
+        text-shadow: 0px 4px 14px #000000;
+
+        width: 100%;
+    }
+
+    .card-text {
+        margin-top: 20px;
+        text-align: left;
+        padding: 20px;
+    }
+
     .info-turystyczna3 {
         background-image: url(../images/content/bg-if.png);
         background-repeat: no-repeat;
         background-size: cover;
+        height: 564px;
 
         #colcol {
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: flex-start;
             align-items: center;
+
+            h1 {
+                margin-top: 50px;
+            }
+
+            p {
+                margin-top: 50px;
+            }
         }
 
+        img {
+            position: relative;
+        }
+
+        #button-kontakt {
+            margin-top: 70px;
+        }
+
+    }
+
+    .info-turystyczna5 {
+        p {
+            font-weight: 700;
+            padding-top: 20px;
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+    }
+
+    #if-img1 {
+        bottom: 80px;
+    }
+
+    #if-img2 {
+        bottom: 370px;
+        left: 150px;
+        z-index: 1111;
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+    #if-img3 {
+        bottom: 450px;
+        left: 110px;
+    }
+
+    #if-img4 {
+        bottom: 180px;
+        z-index: 14;
+    }
+
+    #if-img5 {
+        bottom: 380px;
+        right: 0px;
+        z-index: 11;
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+    #if-img6 {
+        bottom: 480px;
+        right: -50px;
     }
 
     .info-turystyczna2 {
@@ -188,11 +365,82 @@
     }
 
     .bg-kulinarny {
-        background-image: url(../images/content/szlak-kul.jpg);
+        background-image: url(../images/content/szlak-kul-bg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
     }
+
+    #kul-bg {
+        background-image: url(../images/design/page-bg.png);
+
+        p {
+            padding: 15px;
+            font-family: 'Anonymous Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 32px;
+            /* or 178% */
+
+            letter-spacing: -1px;
+
+            /* Colors/Black */
+
+            color: #0F0C07;
+        }
+
+    }
+
+    #kul-info {
+        #card-title {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 21%;
+            padding: 30px;
+            left: 50%;
+            font-family: 'IM FELL English';
+            font-style: italic;
+            font-weight: 400;
+            font-size: 42px;
+            line-height: 100%;
+            /* identical to box height, or 42px */
+            text-align: center;
+            letter-spacing: -1.5px;
+            /* Colors/White */
+            color: #FFFFFF;
+            text-shadow: 0px 4px 14px #000000;
+            width: 100%;
+        }
+    }
+    #kolo-info {
+        #card-title {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 11%;
+            padding: 30px;
+            left: 50%;
+            font-family: 'IM FELL English';
+            font-style: italic;
+            font-weight: 400;
+            font-size: 42px;
+            line-height: 100%;
+            /* identical to box height, or 42px */
+            text-align: center;
+            letter-spacing: -1.5px;
+            /* Colors/White */
+            color: #FFFFFF;
+            text-shadow: 0px 4px 14px #000000;
+            width: 100%;
+        }
+    }
+
+    .carousel-item img {
+        width: 600px;
+        height: 600px;
+        object-fit: cover;
+    }
+
 
     .bg-kontakt {
         background-image: url(../images/content/szlak-bg.jpg);
@@ -278,7 +526,26 @@
         height: 608px;
     }
 
+    #powrot-oferta-black {
+        padding: 14px 32px;
+        padding-left: 24px;
+        text-align: center;
+        background-color: transparent;
+        color: #000000;
+        font-family: "Anonymous Pro", monospace;
+        font-weight: normal;
+        border: 1px solid #000000;
+        font-size: 15px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.3s;
+    }
 
+    #powrot-oferta-black:hover {
+        background-color: #000000d3;
+        border: 1px #000000d7;
+        color: #ffffff;
+    }
 
     #powrot-oferta {
         padding: 14px 32px;
