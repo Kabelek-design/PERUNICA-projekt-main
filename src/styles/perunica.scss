@@ -23,6 +23,195 @@
         color: black;
         font-family: 'Anonymous Pro', serif;
     }
+// wysoki kontrast strony
+    .high-contrast {
+        color: yellow !important;
+        background-color: black;
+        background-image: none;
+        a{
+            color: yellow;
+        }
+        .font-im1 {
+            color: yellow;
+        }
+        .font1-index {
+            color: yellow;
+        }
+        .font2-index {
+            color: yellow;
+        }
+        .font-im2 {
+            color: yellow;
+        }
+        #talk {
+            color: yellow;
+        }
+        .col {
+            color: yellow !important;
+        }
+        .row {
+            color: yellow !important;
+        }
+        #jacek {
+            color: yellow !important;
+            span{
+                color: yellow !important;
+            }
+            a{
+                color: yellow !important;
+            }
+        }
+        #kul-bg{
+            background: black;
+            p{
+                color: yellow;
+            }
+            span{
+                color: yellow;
+            }
+        }
+        #col2 {
+            color: yellow !important;
+        }
+        .font-im3 {
+            color: yellow;
+            -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px yellow;
+        }
+        .nav-link {
+            color: yellow !important;
+            a:visited {
+                color: yellow !important;
+            }
+        }
+        #navbar-info{
+            color: yellow;
+        }
+        #kontakt-info{
+            color: yellow !important;
+            p{
+                color: yellow !important;
+            }
+        }
+        header{
+            background-image: none;
+        }
+        footer{
+            span{
+                opacity: 100%;
+            }
+            #linia2{
+                height: 2px;
+                width: 120px;
+                margin-top: 14px;
+            }
+        }
+        .info-turystyczna2{
+            background: black;
+            p{
+                color: yellow;
+            }
+
+        }
+        #talk{
+            color: yellow !important;
+        }
+        .card{
+            color: yellow;
+        }
+        .card-text{
+            background-color: black;
+        }
+        .info-turystyczna3{
+            background: black;
+            p{
+                color: yellow;
+            }
+            #zwiedzanie{
+                color: yellow;
+            }
+
+        }
+        .info-turystyczna{
+            background: black;
+        }
+        #img-if1{
+            color: yellow;
+        }
+        span{
+            color: yellow;
+        }
+        #talk{
+            color: yellow;
+        }
+        .button1-index{
+            background-color: yellow;
+            border: 1px solid yellow;
+            color: rgb(0, 0, 0);
+        }
+        .button1-index:hover {
+            background-color: yellow;
+            color: rgb(0, 0, 0);
+            transition: 0.5s;
+        }
+        .button2-index{
+            background-color: yellow;
+            border: 1px solid black;
+            color: black;
+        }
+        .button2-index:hover {
+            background-color: yellow;
+            color: rgb(0, 0, 0);
+            transition: 0.5s;
+        }
+        .button3-index{
+            background-color: yellow;
+            border: 1px solid black;
+            color: black;
+        }
+        .button3-index:hover {
+            background-color: yellow;
+            color: rgb(0, 0, 0);
+            transition: 0.5s;
+        }
+        #powrot-oferta-black{
+            span{
+                color: #000000;
+            }
+            background-color: yellow;
+            border: 1px solid black;
+            color: black;
+        }
+        #powrot-oferta-black:hover{
+            background-color: yellow;
+            border: 1px solid black;
+            color: black;
+        }
+        #powrot-oferta{
+            background-color: yellow;
+            border: 1px solid black;
+            color: black;
+        }
+        #powrot-oferta:hover{
+            background-color: yellow;
+            border: 1px solid black;
+            color: black;
+        }
+        .opis{
+            color: yellow;
+        }
+        #welesowy{
+            color: yellow;
+            background-image: none;
+        }
+        .welesowy{
+            color: yellow;
+            background-image: none;
+        }
+
+
+      }
+      
 
     header {
         height: 1265.74px;
@@ -417,7 +606,7 @@
         #card-title {
             position: absolute;
             transform: translate(-50%, -50%);
-            top: 11%;
+            top: 13%;
             padding: 30px;
             left: 50%;
             font-family: 'IM FELL English';
@@ -433,6 +622,13 @@
             text-shadow: 0px 4px 14px #000000;
             width: 100%;
         }
+    }
+#oferta-odkryj{
+    padding: 13px 32px;
+    font-size: 15px;
+}
+    #card-text-toggle-btn{
+        z-index: 1111;
     }
 
     .carousel-item img {
@@ -570,6 +766,11 @@
     }
 
     #linia {
+        height: 2px;
+        width: 120px;
+        margin-top: 14px;
+    }
+    #linia1 {
         height: 2px;
         width: 120px;
         margin-top: 14px;

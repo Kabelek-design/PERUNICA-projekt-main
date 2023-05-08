@@ -39,8 +39,8 @@
                 <img id="linia" src="images/content/line-1-white.png" alt="linia" height="2" width="1">
                 <a class="nav-link active" aria-current="page" href="#"><img src="images/content/text-size-white.png"
                         alt="Przycisk do powiększania czcionki"></a>
-                <a class="nav-link active" aria-current="page" href="#"><img
-                        src="images/content/high-contrast-white.png" alt="Przycisk do zmiany kontrastu strony"></a>
+                <a class="nav-link active" aria-current="page" href="#" id="contrast-btn"><img
+                        src="images/content/high-contrast-white.png" alt="Przycisk do zmiany kontrastu strony" ></a>
             </div>
             </div>
         </nav>
@@ -94,33 +94,28 @@
             <div class="row">
                 <div class="col d-flex justify-content-center">
                     <div class="card" id="card">
-
-                        <img src="images/content/swieto-swiec.jpg" alt="Miecz na ławie oraz opis Wyprawy">
+                        <img src="images/content/swiece1.jpg" alt="Miecz na ławie oraz opis Wyprawy">
                         <div class="card-title" id="card-title">Święto Świec</div>
-
-                        <div class="card-text" id="card-text-content">
-                            <p>
-
-                                Święto Świec to pierwsze święto Koła Roku. Przypada w okolicach lutowego sabatu
-                                większego, który w tradycji polskiej obchodzony jest jako Matki Boskiej Gromnicznej
-                                (Gromnica). Święto to istnieje bardzo długo, w różnych religiach. Celtowie obchodzili je
-                                na cześć bogini Brigid, w starożytnym Rzymie poprzedzało Luperkalia. Początkiem roku
-                                konieczne było oczyszczenie przez ogień i wodę. Stąd zwyczaj święcenia przyniesionych do
-                                kościoła świec (gromnic). Gromnice miały moc chronienia przed piorunami, oświetlały
-                                drogę, domostwa ale także ostatnie chwile umierających. Gromnice chroniły też przed
-                                wilkami, co opisuje jedna z najpiękniejszych legend polskich: o Matce Boskiej
-                                Gromnicznej i wilku. Jedno jest pewne – tradycja ta jest dużo wcześniejsza niż religie
-                                nowożytne, a świece były od zawsze jednymi z najważniejszych przedmiotów obrzędowych w
-                                życiu człowieka. Święto Świec to święto ognia i jego magicznych mocy – oczyszczenia,
-                                ukojenia, rozświetlania mroku. Podczas eventu doświadczycie wszelkich sensualnych i
-                                dobroczynnych właściwości świec, przygotujecie je samodzielnie, uzyskacie wiedzę o
-                                aromaterapii, apiterapii, światłoterapii, medytacji. Będzie też okazja do zaopatrzenia
-                                się w wysokiej jakości produkty związane z wyżej wymienionymi dziedzinami.
-                            </p>
-                            <button id="card-text-toggle-btn" onclick="toggleCardText()">Czytaj dalej</button>
-
+                        <div class="card-text" >
+                          <p>Święto Świec to pierwsze święto Koła Roku. Przypada w okolicach lutowego sabatu
+                            większego, który w tradycji polskiej obchodzony jest jako Matki Boskiej Gromnicznej
+                            (Gromnica). Święto to istnieje bardzo długo, w różnych religiach. Celtowie obchodzili je
+                            na cześć bogini Brigid, w starożytnym Rzymie poprzedzało Luperkalia. Początkiem roku
+                            konieczne było oczyszczenie przez ogień i wodę. Stąd zwyczaj święcenia przyniesionych do
+                            kościoła świec (gromnic). Gromnice miały moc chronienia przed piorunami, oświetlały
+                            drogę, domostwa ale także ostatnie chwile umierających. <span id="card-text-content" hidden> Gromnice chroniły też przed
+                            wilkami, co opisuje jedna z najpiękniejszych legend polskich: o Matce Boskiej
+                            Gromnicznej i wilku. Jedno jest pewne – tradycja ta jest dużo wcześniejsza niż religie
+                            nowożytne, a świece były od zawsze jednymi z najważniejszych przedmiotów obrzędowych w
+                            życiu człowieka. Święto Świec to święto ognia i jego magicznych mocy – oczyszczenia,
+                            ukojenia, rozświetlania mroku. Podczas eventu doświadczycie wszelkich sensualnych i
+                            dobroczynnych właściwości świec, przygotujecie je samodzielnie, uzyskacie wiedzę o
+                            aromaterapii, apiterapii, światłoterapii, medytacji. Będzie też okazja do zaopatrzenia
+                            się w wysokiej jakości produkty związane z wyżej wymienionymi dziedzinami.</span></p>
                         </div>
-                    </div>
+                        <button id="read-more-btn">Czytaj dalej</button>
+                      </div>
+                      
                 </div>
                 <div class="col d-flex justify-content-center">
                     <div class="card" id="card">
@@ -193,7 +188,7 @@
                 <div class="col d-flex justify-content-center">
                     <div class="card" id="card">
 
-                        <img src="images/content/kulinaria1.jpg" alt="Miecz na ławie oraz opis Wyprawy">
+                        <img src="images/content/zniwniok.jpg" alt="Miecz na ławie oraz opis Wyprawy">
                         <div class="card-title" id="card-title">Żniwniok</div>
 
                         <div class="card-text">
@@ -247,82 +242,64 @@
 
     <footer>
         <div class="box-footer">
-
-            <h1 class="font-im1" id="dziejesie">Kontakt</h1>
-            <h1 class="font-im2" id="talk">Porozmawiajmy</h1>
+    
+          <h1 class="font-im1" id="dziejesie">Kontakt</h1>
+          <h1 class="font-im2" id="talk">Porozmawiajmy</h1>
         </div>
-
+    
         <div class="row" style="background-color: #070603; max-width: 800px; color: #ffffff;">
-            <div class="col" style="text-align: left">
-                <p>Spółdzielnia Socjalna Perunica<span>,</p>
-                <p><span>ul. Dworcowa 7, 46-220 Byczyna,</span></p>
-                <p><span>NIP: 751-177-32-15, </span></p>
-                <p><span>REGON: 161576666</span></p>
-            </div>
-            <div class="col" style="text-align: left; color: #ffffff;">
-                <p><span>E-mail: </span></p>
-                <p>olaarkona@gmail.com,</p>
-                <p>aniaarkona@gmail.com</p>
-                <p><span>Telefon (8-16): </span> +48 785 207 065</p>
-            </div>
-        </div>
-        <div class="row" style=" max-width: 700px; padding-top: 100px; color: #ffffff;">
-            <div class="col-md-7"><span>Jesteśmy w social mediach!</span></div>
-            <div class="col-md-2"><img src="images/content/line-1.jpg" style="margin-top: 10px;" alt="Line" /></div>
-            <div class="col">
-                <a target="_blank" href="https://www.facebook.com/perunica.sp.s"><img
-                        src="images/content/logo-fb-simple-gold.png" alt="Link do facebook"></a>
-            </div>
-            <div class="col">
-                <a target="_blank" href="https://www.instagram.com/perunica_byczyna/?hl=pl"><img
-                        src="images/content/logo-instagram-gold.png" alt="Link do instagram"></a>
-            </div>
-        </div>
-        <div class="row" style="background-color: #070603; max-width: 80%;">
-            <div class="col">
-                <img src="images/content/line-1.jpg" alt="Line" style="width: 100%; height: 2px; color: white;" />
-            </div>
-        </div>
-        <div class="row" style="background-color: #070603; color: #ffffff; max-width: 100%; padding: 0 10% 0 10%;">
-            <div class="col" style="text-align: left"><span>© 2023</span> Perunica <span>- Wszelkie prawa
-                    zastrzeżone</span></div>
-            <div class="col" style="text-align: right"><a target="blank" href="https://jacekpuzio.pl"
-                    style="text-decoration: none; color: white;"><span>Projekt</span> jacekpuzio.pl</a></div>
-        </div>
-    </footer>
+          <div class="col" style="text-align: left">
+              <p>Spółdzielnia Socjalna Perunica<span>,</p>
+              <p><span>ul. Dworcowa 7, 46-220 Byczyna,</span></p>
+              <p><span>NIP: 751-177-32-15, </span></p>
+              <p><span>REGON: 161576666</span></p>
+          </div>
+          <div class="col" id="col2" style="text-align: left; color: #ffffff;">
+              <p><span>E-mail: </span></p>
+              <p>olaarkona@gmail.com,</p>
+              <p>aniaarkona@gmail.com</p>
+              <p><span>Telefon (8-16): </span> +48 785 207 065</p>
+          </div>
+      </div>
+      <div class="row" style=" max-width: 700px; padding-top: 100px; color: #ffffff;">
+          <div class="col-md-7"><span>Jesteśmy w social mediach!</span></div>
+          <div class="col-md-2"><img src="images/content/line-1.jpg" style="margin-top: 10px;" alt="Line" id="linia2"/></div>
+          <div class="col">
+              <a target="_blank" href="https://www.facebook.com/perunica.sp.s"><img src="images/content/logo-fb-simple-gold.png" id="fb-gold" alt="Link do facebook"></a>
+          </div>
+          <div class="col">
+              <a target="_blank" href="https://www.instagram.com/perunica_byczyna/?hl=pl"><img src="images/content/logo-instagram-gold.png" id="ig-gold" alt="Link do instagram"></a>
+          </div>
+      </div>
+      <div class="row" style="background-color: #070603; max-width: 80%;">
+          <div class="col">
+              <img src="images/content/line-1.jpg" alt="Line" style="width: 100%; height: 2px; color: white;" />
+          </div>
+      </div>
+      <div class="row" style="background-color: #070603; color: #ffffff; max-width: 100%; padding: 0 10% 0 10%;">
+          <div class="col" style="text-align: left"><span>© 2023</span> Perunica <span>- Wszelkie prawa zastrzeżone</span></div>
+          <div class="col"  style="text-align: right"><a target="blank" href="https://jacekpuzio.pl" id="jacek" style="text-decoration: none; color: white;"><span>Projekt</span> jacekpuzio.pl</a></div>
+      </div>
+      </footer>
 
 
 
-    <script>
-        var cardTextContent = document.getElementById("card-text-content");
-        var cardTextToggleBtn = document.getElementById("card-text-toggle-btn");
 
-        function toggleCardText() {
-            if (cardTextContent.style.display === "none") {
-                cardTextContent.style.display = "block";
-                cardTextToggleBtn.innerHTML = "Zwiń";
-            } else {
-                cardTextContent.style.display = "none";
-                cardTextToggleBtn.innerHTML = "Czytaj dalej";
-            }
-        }
+<script>
+    const readMoreBtn = document.getElementById('read-more-btn');
+const cardTextContent = document.getElementById('card-text-content');
 
-        function truncateCardText() {
-            var maxLength = 500;
-            var cardText = cardTextContent.innerHTML.trim();
+readMoreBtn.addEventListener('click', () => {
+  if (cardTextContent.hasAttribute('hidden')) {
+    cardTextContent.removeAttribute('hidden');
+    readMoreBtn.textContent = 'Zwiń';
+  } else {
+    cardTextContent.setAttribute('hidden', '');
+    readMoreBtn.textContent = 'Czytaj dalej';
+  }
+});
 
-            if (cardText.length > maxLength) {
-                var truncatedCardText = cardText.substring(0, maxLength);
-                cardTextContent.innerHTML = truncatedCardText + "...";
-                cardTextToggleBtn.style.display = "block";
-            }
-        }
-
-        truncateCardText();
-    </script>
-
-
-
+</script>
 
 
 
