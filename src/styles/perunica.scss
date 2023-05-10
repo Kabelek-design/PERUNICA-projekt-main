@@ -327,6 +327,45 @@ html{
             font-weight: 700;
         }
     }
+    #galazka-kont{
+        position: absolute;
+        left: 20%;
+        bottom: -100px;
+        width: 250px;
+    }
+    #img-if1k {
+        padding-top: 60px;
+        font-family: 'Anonymous Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        width: 100% !important;
+        text-align: center;
+        /* or 178% */
+
+        letter-spacing: -1px;
+
+        /* Colors/Black */
+
+        color: #0F0C07;
+
+        span {
+            font-weight: 700;
+        }
+        br{
+            display: none;
+        }
+        p{
+            padding: 2px !important;
+        }
+    }
+    .linki{
+        padding-top: 50px;
+        display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    }
 
     .info-turystyczna {
         display: flex;
@@ -698,7 +737,7 @@ html{
     .bg-kontakt {
         background-image: url(../images/content/szlak-bg.jpg);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: cover;background-position-x: 23%;
         height: 608px;        #navbar a {
             color: white;
         }
@@ -1897,6 +1936,45 @@ html{
             font-weight: 700;
         }
     }
+    #galazka-kont{
+        position: absolute;
+        left: 31%;
+        bottom: -100px;
+        width: 250px;
+    }
+    #img-if1k {
+        padding-top: 60px;
+        font-family: 'Anonymous Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        width: 100% !important;
+        text-align: center;
+        /* or 178% */
+
+        letter-spacing: -1px;
+
+        /* Colors/Black */
+
+        color: #0F0C07;
+
+        span {
+            font-weight: 700;
+        }
+        br{
+            display: none;
+        }
+        p{
+            padding: 2px !important;
+        }
+    }
+    .linki{
+        padding-top: 50px;
+        display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    }
 
     .info-turystyczna {
         display: flex;
@@ -2266,7 +2344,7 @@ html{
     .bg-kontakt {
         background-image: url(../images/content/szlak-bg.jpg);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: cover;background-position-x: 58%;
         height: 608px;        #navbar a {
             color: white;
         }
@@ -3251,6 +3329,42 @@ html{
             font-weight: 700;
         }
     }
+    #galazka-kont{
+        position: relative;
+        bottom: 80px;
+
+    }
+    #img-if1k {
+
+                font-family: 'Anonymous Pro';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 32px;
+                /* or 178% */
+        
+                letter-spacing: -1px;
+        
+                /* Colors/Black */
+        
+                color: #0F0C07;
+        
+                span {
+                    font-weight: 700;
+                }
+                br{
+                    display: none;
+                }
+                p{
+                    padding: 2px !important;
+                }
+            }
+            .linki{
+                padding-top: 50px;
+                display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            }
 
     .info-turystyczna {
         display: flex;
@@ -3623,7 +3737,7 @@ html{
     .bg-kontakt {
         background-image: url(../images/content/szlak-bg.jpg);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: cover;        background-position-x: 47%;
         height: 608px;        #navbar a {
             color: white;
         }
@@ -4566,6 +4680,35 @@ html{
             font-weight: 700;
         }
     }
+    #galazka-kont{
+        position: relative;
+        bottom: 120px;
+
+    }
+    #img-if1k {
+        padding-left: 50px;
+                font-family: 'Anonymous Pro';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 32px;
+                /* or 178% */
+        
+                letter-spacing: -1px;
+        
+                /* Colors/Black */
+        
+                color: #0F0C07;
+        
+                span {
+                    font-weight: 700;
+                }
+            }
+            .linki{
+                display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            }
 
     .info-turystyczna {
         display: flex;
@@ -4934,6 +5077,7 @@ html{
         background-image: url(../images/content/szlak-bg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position-x: 47%;
         height: 608px;        #navbar a {
             color: white;
         }
@@ -4969,12 +5113,12 @@ html{
     }
 
     .image1 {
-        left: 120px;
+
         top: 500px;
     }
 
     .image2 {
-        right: 40px;
+        right: 1px;
         top: 380px;
         -webkit-animation: action 1s infinite alternate;
         animation: action 1s infinite alternate;
@@ -5768,6 +5912,35 @@ html{
             font-weight: 700;
         }
     }
+    #galazka-kont{
+        position: relative;
+        bottom: 120px;
+
+    }
+    #img-if1k {
+        padding-left: 50px;
+                font-family: 'Anonymous Pro';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 32px;
+                /* or 178% */
+        
+                letter-spacing: -1px;
+        
+                /* Colors/Black */
+        
+                color: #0F0C07;
+        
+                span {
+                    font-weight: 700;
+                }
+            }
+            .linki{
+                display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            }
 
     .info-turystyczna {
         display: flex;
@@ -6134,6 +6307,7 @@ html{
         background-image: url(../images/content/szlak-bg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position-x: 47%;
         height: 608px;        #navbar a {
             color: white;
         }
@@ -6152,7 +6326,7 @@ html{
         font-size: 18px;
         line-height: 36px;
         /* or 200% */
-
+        width: 35.333333% !important;
         letter-spacing: -0.5px;
 
         /* Colors/Black */
@@ -6169,12 +6343,12 @@ html{
     }
 
     .image1 {
-        left: 120px;
+        left: 40px;
         top: 500px;
     }
 
     .image2 {
-        right: 40px;
+        right: 20px;
         top: 380px;
         -webkit-animation: action 1s infinite alternate;
         animation: action 1s infinite alternate;
@@ -6935,6 +7109,30 @@ html{
         bottom: 100px;
     }
 
+    #img-if1k {
+padding-left: 50px;
+        font-family: 'Anonymous Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        /* or 178% */
+
+        letter-spacing: -1px;
+
+        /* Colors/Black */
+
+        color: #0F0C07;
+
+        span {
+            font-weight: 700;
+        }
+    }
+    .linki{
+        display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    }
     #img-if1 {
         padding: 80px;
         font-family: 'Anonymous Pro';
@@ -7323,6 +7521,11 @@ html{
         height: 608px;        #navbar a {
             color: white;
         }
+    }
+    #galazka-kont{
+        position: relative;
+        bottom: 120px;
+
     }
 
     // #kontakt-info{
