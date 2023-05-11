@@ -74,3 +74,33 @@ contrastBtn.addEventListener("click", function () {
 
 
 
+var button = document.getElementById("text-img");
+var paragraphs = document.getElementsByTagName("p");
+
+button.addEventListener("click", function() {
+  for (var i = 0; i < paragraphs.length; i++) {
+    if (paragraphs[i].classList.contains("enlarge")) {
+      paragraphs[i].classList.remove("enlarge");
+    } else {
+      paragraphs[i].classList.add("enlarge");
+    }
+  }
+});
+
+var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+scrollToTopBtn.addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 200) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+});
+
