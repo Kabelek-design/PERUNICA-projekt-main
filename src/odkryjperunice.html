@@ -5,155 +5,211 @@
     <meta charset="UTF-8">
     <title>Perunica</title>
     <meta name="description" content="">
-    <meta name="keywords" content="turystyka doświadczeń, eventy, Byczyna, turystyka Byczyna, informacja turystyczna, przewodnicy po Byczynie, Szlak Czarownic, eventy kulinarne, szlak kulinarny, szlaki kulinarne, dziedzictwo kulinarne, smaki regionów, visitopolskie, Opolszczyzna, Opolskie, turystka 4E, turystyka aktywna, turystyka historyczna, żywe lekcje historii, żywa historia, warsztaty historyczne, warsztaty rzemieślnicze, rzemiosło, handmade">
+    <meta name="keywords"
+        content="turystyka doświadczeń, eventy, Byczyna, turystyka Byczyna, informacja turystyczna, przewodnicy po Byczynie, Szlak Czarownic, eventy kulinarne, szlak kulinarny, szlaki kulinarne, dziedzictwo kulinarne, smaki regionów, visitopolskie, Opolszczyzna, Opolskie, turystka 4E, turystyka aktywna, turystyka historyczna, żywe lekcje historii, żywa historia, warsztaty historyczne, warsztaty rzemieślnicze, rzemiosło, handmade">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Michał Gąsiorski">
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 
+
 <body>
-    <header class="odkryj-bg">
-        <div class="navbar">
-            <!-- Brand/logo -->
-            <div class="position-nav" style="background-color:rgba(0, 0, 0, 0.0); height: 10%; width: 100%">
-                <nav class="navbar">
-                    <!-- Brand/logo -->
-                    <ul class="navbar-nav">
-                        <li><a class="navbar-brand" href="index.html">
-                            <img src="images/content/perunica-logo.png" alt="logo">
-                        </a></li>
 
-                        <!-- Links -->
+    <section class="bg-odkryj">
+        <br><br>
+        <br>
 
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: white;" href="index.html">Start</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: white;" href="odkryjperunice.html">Odkryj Perunicę</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: white;" href="index.html#oferta">Oferta</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: white;" href="index.html#aktualnosci">Aktualności</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: white;" href="kontakt.html">Kontakt</a>
-                        </li>
-                        <li>
-                            <img src="images/content/line-1-white.png" alt="linia">
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/perunica.sp.s" target="blank"><img src="images/content/logo-fb-simple-white.png" alt="facebook"></a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/perunica_byczyna/?hl=pl"><img src="images/content/logo-instagram-white.png" alt="instagram"></a>
-                        </li>
-                        <li>
-                            <img src="images/content/line-1-white.png" alt="linia">
-                        </li>
-                        <li>
-                            <a href="#"><img src="images/content/text-size-white.png" alt="zmiana czcionki"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img id="contrast" src="images/content/high-contrast-white.png" alt="wysoki kontrast"></a>
-                        </li>
-                    </ul>
-                </nav>
+        <nav class="navbar">
+            <div class="container-fluid" id="navbar">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                  <span class="line line1"></span>
+                  <span class="line line2"></span>
+                  <span class="line line3"></span>
+                </div> 
+                <a class="navbar-brand" href="index.html"><img src="images/content/perunica-logo.png"
+                        alt="Logo Perunicy"></a>
+                <a class="nav-link active" aria-current="page" href="index.html">Start</a>
+                <a class="nav-link active" aria-current="page" href="odkryjperunice.html">Odkryj Perunicę</a>
+                <a class="nav-link active" aria-current="page" href="index.html#oferta">Oferta</a>
+                <a class="nav-link active" aria-current="page" href="index.html#updates">Aktualności</a>
+                <a class="nav-link active" aria-current="page" href="kontakt.html">Kontat</a>
+                <img id="linia" src="images/content/line-1-white.png" alt="linia" height="2" width="1">
+                <a class="nav-link active" aria-current="page" href="https://www.facebook.com/perunica.sp.s"
+                    target="_blank"><img src="images/content/logo-fb-simple-white.png" alt="logo Facebook"></a>
+                <a class="nav-link active" aria-current="page" href="https://www.instagram.com/perunica_byczyna/"
+                    target="_blank"><img src="images/content/logo-instagram-white.png" alt="logo instagram"></a>
+                <img id="linia" src="images/content/line-1-white.png" alt="linia" height="2" width="1">
+                <a class="nav-link active" aria-current="page" href="#"><img src="images/content/text-size-white.png"
+                        alt="Przycisk do powiększania czcionki" id="text-img"></a>
+                <a class="nav-link active" aria-current="page" href="#" id="contrast-btn"><img
+                        src="images/content/high-contrast-white.png" alt="Przycisk do zmiany kontrastu strony" ></a>
             </div>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 class="font-im1" id="dziejesie">Odkryj</h1>
+        <h1 class="font-im2" id="talk">Perunicę</h1>
+    </section>
+    <button id="scrollToTopBtn">Powrót na górę strony</button>
+    <section class="info-turystyczna" id="kul-bg">
         <div class="row">
-            <div class="col" style="text-align: center; margin-top: 130px;">
-                <p class="font-im-italic" style="color: #BC8417; font-size:  2.6875em;">Odkryj</p>
-                <p class="font-im-regular" style="color: white; font-size: 4.375em; ">Perunicę</p>
+            <div class="col-4" id="img-if2"><img src="images/content/flick-8.jpg" alt="2 kobiety siedzące przy świecach"></div>
+            <div class="col-6" id="img-if1">
+                <p>
+                    <span style="font-family: 700;">Nasz zespół tworzą ludzie zakochani w Byczynie - w jej klimacie,
+                        historii, kulturze.</span>
+                </p>
+                <br>
+                <p>
+                    Poprzez nasze usługi chcemy zapewnić Wam pakiet doświadczeń: <span style="font-weight: 700;">rozrywkowych, edukacyjnych,
+                        wypoczynkowych, kulinarnych, emocjonalnych, rozwojowych i integrujących,</span> zbudowanych na historii,
+                    folklorze i fantastyce.
+                </p>
+                <br>
+                <p>
+                    W naszej ofercie znajdziecie eventy związane z Kołem Roku, wycieczki Szlakiem Czarownic, team
+                    building w realiach fantastyki historycznej.
+                </p>
+                <br>
+                <p>
+                    Wszystko to oparte o naszą wiedzę, doświadczenie, umiejętności i osobowości.
+
+                </p>
+                <br>
+
+                <p>
+                    <section class="odkryj-row">
+
+                        <a href="index.html#oferta">
+                            
+                            <button type="button" class="button1-index" id="oferta-odkryj">Poznaj Ofertę</button>
+                        </a>
+                        <a href="kontakt.html">
+                            
+                            <button type="button" id="powrot-oferta-black"><span style="font-weight: 700;"> &lt; Skontaktuj
+                                się</span></button>
+                            </a>
+                        </section>
+                </p>
             </div>
         </div>
-    </header>
+    </section>
+    <br>
+    <br>
+    <br>
 
-    <div class="row-flex" style="min-width: 800px;">
+    <section class="obiektyw-tb">
+        <h1 class="font-im2" id="talk" style="color: black; font-style: italic;">W obiektywie...</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
-            <div class="col 1" style="float: right;">
-                <img src="images/content/odkryj-1.jpg" alt="Obraz 5 Kobiet tańczących na wodzie" style="margin: auto; padding: 0px 40px 40px 40px;">
-                <img class="runa-odkryj" src="images/content/sign-odkryj.svg" alt="Runa pod obrzędem">
-            </div>
-
-            <div class="col 2" style="float: left; line-height: 32px; letter-spacing: -1px;">
-                <p class="opis-odkryj"><strong>Nasz zespół tworzą ludzie zakochani w Byczynie - w jej klimacie, historii, kulturze.</strong></p>
-                <p class="opis-odkryj">Poprzez nasze usługi chcemy zapewnić Wam pakiet doświadczeń: <strong>rozrywkowych, edukacyjnych, wypoczynkowych, kulinarnych, emocjonalnych, rozwojowych i integrujących,</strong> zbudowanych na historii, folklorze i fantastyce.</p>
-                <p class="opis-odkryj">W naszej ofercie znajdziecie eventy związane z Kołem Roku, wycieczki Szlakiem Czarownic, team building w realiach fantastyki historycznej.</p>
-                <p class="opis-odkryj">Wszystko to oparte o naszą wiedzę, doświadczenie, umiejętności i osobowości.</p>
-                <p><a href="index.html#oferta"><button class="btn1">Poznaj ofertę</button></a><a href="kontakt.html"><button class="btn2">Skontaktuj się</button></a></p>
-
-            </div>
-
-    </div>
-
-    <p class="font-im-italic" style="font-size: 4.375em; text-align: center; color: black; padding: 9%;">W obiektywie...</p>
-
-    <div class="carousel js-flickity" data-flickity-options='{ "imagesLoaded":"true", "autoPlay": "true", "watchCSS":"true", "wrapAround": true }'
-    >
-    <div class="carousel-cell">
-       <img src="images/content/flick-1.jpg">
-    </div>
-    <div class="carousel-cell">
-       <img src="images/content/Ania.jpg">
-    </div>
-    <div class="carousel-cell">
-       <img src="images/content/Asia.jpeg">
-    </div>
-    <div class="carousel-cell">
-       <img src="images/content/flick-5.jpg">
-    </div>
-    <div class="carousel-cell">
-       <img src="images/content/flick-6.jpg">
-    </div>
-
-    <div class="carousel-cell">
-       <img src="images/content/flick-0.jpg">
-    </div>
-    </div>
-
-    <script src="https://npmcdn.com/flickity@1.2/dist/flickity.pkgd.min.js"></script>
-<link rel="stylesheet" href="https://npmcdn.com/flickity@1.2/dist/flickity.min.css">
+        <div class="carousel">
+            <div class="carousel-cell"><img src="images/content/flick-0.jpg" alt="Prezeska stowarzyszenia stojąca podczas eventu dziadowskie party"></div>
+            <div class="carousel-cell"><img src="images/content/flick-1.jpg" alt="Prezeska Spółdzielni socjalnej Perunica stojaca za baren nalewająca piwo"></div>
+            <div class="carousel-cell"><img src="images/content/flick-3.jpg" alt="Kobieta w długich dredach z koszyczkiem rozdająca prezenty podczas eventu matki boskiej zielnej"></div>
+            <div class="carousel-cell"><img src="images/content/flick-4.jpg" alt="6 Kobiet w stroju sukniach historycznych"></div>
+            <div class="carousel-cell"><img src="images/content/flick-5.jpg" alt="Księgowa Spółdzielnia socjalnej Perunica obsługująca stoisko welesowego kramu na evencie matki boskiej zielnej"></div>
+            <div class="carousel-cell"><img src="images/content/flick-6.jpg" alt="Pokaz Ognia i iskier podczas eventu Dziadowskie party"></div>
+            <div class="carousel-cell"><img src="images/content/flick-7.jpg" alt="4 kobiety czytajace mapę grając w grę terenową podczas nocy świętojańskiej"></div>
+            <div class="carousel-cell"><img src="images/content/flick-9.jpg" alt="Uczestniczy eventu matki boskiej zielnej siedzący pod parasolami na ławkach"></div>
+            <div class="carousel-cell"><img src="images/content/flick-10.jpg" alt="Kamil Klekowski wykonujący pokaz kulinarny podczas eventu matki boskiej zielnej"></div>
+        </div>
+    </section>
 
 
     <footer>
-        <p class="font-im-italic" style="color: #BC8417; line-height: 90px;">Kontakt</p>
-        <p class="font-im-regular">Porozmawiajmy</p>
-        <div class="row" style="background-color: #070603; max-width: 800px;">
-            <div class="col" style="text-align: left">
+        <div class="box-footer">
+
+            <h1 class="font-im1" id="dziejesie">Kontakt</h1>
+            <h1 class="font-im2" id="talk">Porozmawiajmy</h1>
+          </div>
+      
+          <div class="row" id="footer-wrap" style="background-color: #070603; max-width: 800px; color: #ffffff;">
+            <div class="col" id="footer-opis" style="text-align: left">
                 <p>Spółdzielnia Socjalna Perunica<span>,</p>
                 <p><span>ul. Dworcowa 7, 46-220 Byczyna,</span></p>
                 <p><span>NIP: 751-177-32-15, </span></p>
                 <p><span>REGON: 161576666</span></p>
             </div>
-            <div class="col" style="text-align: left">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="col" id="col2" style="text-align: left; color: #ffffff;">
                 <p><span>E-mail: </span></p>
                 <p>olaarkona@gmail.com,</p>
                 <p>aniaarkona@gmail.com</p>
                 <p><span>Telefon (8-16): </span> +48 785 207 065</p>
             </div>
         </div>
-        <div class="row" style=" max-width: 700px; padding-top: 100px;">
-            <div class="col-md-7"><span>Jesteśmy w social mediach!</span></div>
-            <div class="col-md-2"><img src="images/content/line-1.jpg" style="margin-top: 10px;" alt="Line" /></div>
-            <div class="col">
-                <a href="https://www.facebook.com/perunica.sp.s"><img src="images/content/logo-fb-simple-gold.png" alt="Link do facebook"></a>
-            </div>
-            <div class="col">
-                <a href="https://www.instagram.com/perunica_byczyna/?hl=pl"><img src="images/content/logo-instagram-gold.png" alt="Link do instagram"></a>
-            </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="row" id="footer-padding" style=" max-width: 700px; padding-top: 100px; color: #ffffff;">
+            <div class="col-md-7" id="md7-footer"><span>Jesteśmy w social mediach!</span></div>
+      <section class="footer-center">
+        <div class="col-md-2">
+          <img src="images/content/line-1.jpg" style="margin-top: 10px;" alt="Line" id="linia2"/></div>
+        <div class="col">
+            <a target="_blank" href="https://www.facebook.com/perunica.sp.s"><img src="images/content/logo-fb-simple-gold.png" id="fb-gold" alt="Link do facebook"></a>
         </div>
-        <div class="row" style="background-color: #070603; max-width: 80%;">
+        <div class="col">
+            <a target="_blank" href="https://www.instagram.com/perunica_byczyna/?hl=pl"><img src="images/content/logo-instagram-gold.png" id="ig-gold" alt="Link do instagram"></a>
+        </div>
+      </div>
+      </section>
+        <div class="row"  id="footer3" style="background-color: #070603; max-width: 80%;">
             <div class="col">
                 <img src="images/content/line-1.jpg" alt="Line" style="width: 100%; height: 2px; color: white;" />
             </div>
         </div>
-        <div class="row" style="background-color: #070603; max-width: 100%; padding: 0 10% 0 10%;">
-            <div class="col" style="text-align: left"><span>© 2021</span> Perunica <span>- Wszelkie prawa zastrzeżone</span></div>
-            <div class="col" style="text-align: right"><a target="blank" href="https://jacekpuzio.pl" style="text-decoration: none; color: white;"><span>Projekt</span> jacekpuzio.pl</a></div>
+        <div class="row" id="flex-footer-center" style="background-color: #070603; color: #ffffff; max-width: 100%; padding: 0 10% 0 10%;">
+            <div class="col"  id="footer1" style="text-align: left"><span>© 2023</span> Perunica <span>- Wszelkie prawa zastrzeżone</span></div>
+            <div class="col"  id="footer2" style="text-align: right"><a target="blank" href="https://jacekpuzio.pl" id="jacek" style="text-decoration: none; color: white;"><span>Projekt</span> jacekpuzio.pl</a></div>
         </div>
+      </footer>
 
-    </footer>
+    <script>
+        $(document).ready(function () {
+            $('.carousel').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,  // liczba zdjęć przewijanych jednocześnie
+                autoplay: true,  // automatyczne przewijanie
+                autoplaySpeed: 2000,  // czas pomiędzy przewijaniem (w milisekundach)
+                arrows: false,  // wyłączenie strzałek nawigacyjnych
+                dots: false,  // wyłączenie kropek nawigacyjnych
+                pauseOnHover: false,  // automatyczne przewijanie nie zatrzymuje się po najechaniu kursorem
+
+            });
+        });
+
+    </script>
 </body>
 
 </html>

@@ -5,19 +5,13 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 // let htmlPageNames = ['demo-index', 'index-mobile', 'informacja-turystyczna', 'informacja-turystyczna-mobile', 'kolo-roku', 'kolo-roku-mobile', 'kontakt', 'kontakt-mobile', 'odkryjperunice', 'odkryj-perunice-mobile', 'szlak-kulinarny', 'szlak-kulinarny-mobile', 'team-building', 'team-building-mobile'];
 let htmlPageNames = ['demo-index',
-                    'index-mobile',
                     'informacja-turystyczna',
-                    'informacja-turystyczna-mobile',
                     'kolo-roku',
-                    'kolo-roku-mobile',
                     'kontakt',
-                    'kontakt-mobile',
                     'odkryjperunice',
-                    'odkryj-perunice-mobile',
                     'szlak-kulinarny',
-                    'szlak-kulinarny-mobile',
+                    'szlak-czarownic',
                     'team-building',
-                    'team-building-mobile',
                     'pdfs'];
 let multipleHtmlPlugins = htmlPageNames.map(name => {
   return new HtmlWebpackPlugin({
@@ -30,13 +24,7 @@ let multipleHtmlPlugins = htmlPageNames.map(name => {
 });
 
 
-let htmlPageNamesContrast = ['index-c', 'index-mobile-c',
-                    'informacja-turystyczna-c', 'informacja-turystyczna-mobile-c',
-                    'kolo-roku-c', 'kolo-roku-mobile-c',
-                    'kontakt-c', 'kontakt-mobile-c',
-                    'odkryjperunice-c', 'odkryj-perunice-mobile-c',
-                    'szlak-kulinarny-c', 'szlak-kulinarny-mobile-c',
-                    'team-building-c', 'team-building-mobile-c'];
+let htmlPageNamesContrast = [];
 let multipleHtmlPluginsContrast = htmlPageNamesContrast.map(name => {
   return new HtmlWebpackPlugin({
     template: `./src/${name}.html`, // relative path to the HTML files
