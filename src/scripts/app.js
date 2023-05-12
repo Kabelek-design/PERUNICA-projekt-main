@@ -104,3 +104,17 @@ window.addEventListener("scroll", function() {
   }
 });
 
+
+const cookieBanner = document.getElementById('cookie-banner');
+const cookieAcceptButton = document.getElementById('cookie-accept');
+
+cookieAcceptButton.addEventListener('click', () => {
+  cookieBanner.style.display = 'none';
+  localStorage.setItem('cookiesAccepted', 'true');
+});
+
+if (localStorage.getItem('cookiesAccepted')) {
+  cookieBanner.style.display = 'none';
+} else {
+  cookieBanner.style.display = 'block';
+}
