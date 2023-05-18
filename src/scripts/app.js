@@ -5,7 +5,7 @@
 // remember original settings
 
 
-const perunica = () => 'Perunica version 1.0.0';
+const perunica = () => 'Perunica version 1.0.1';
 
 // eslint-disable-next-line no-console
 console.log(perunica());
@@ -51,7 +51,7 @@ contrastBtn.addEventListener("click", function () {
     lineImg1.src = "src/images/content/line4.png";
     fbImg.src = "src/images/content/logo-fb-simple1.png";
     igImg.src = "src/images/content/logo-instagram1.png";
-    lineImg2.src = "src/images/content/line1.png";
+    lineImg2.src = "src/images/content/line-1.jpg";
     fbFooter.src = "src/images/content/logo-fb-simple-gold.png";
     igFooter.src = "src/images/content/logo-instagram-gold.png";
     isHighContrast = false;
@@ -118,3 +118,42 @@ if (localStorage.getItem('cookiesAccepted')) {
 } else {
   cookieBanner.style.display = 'block';
 }
+
+
+// Pobierz elementy obrazków z nawigacji
+const navImages = document.querySelectorAll('.navbar img');
+
+
+function toggleImageURLs() {
+  if (window.innerWidth < 767) {
+    // Zmiana URL obrazków dla mniejszych ekranów
+    navImages.forEach(image => {
+      if (image.id === 'fb-img') {
+        image.src = 'src/images/content/logo-fb-simple-white.png';
+      } else if (image.id === 'ig-img') {
+        image.src = 'src/images/content/logo-instagram-white.png';
+      } else if (image.id === 'contrast-img') {
+        image.src = 'src/images/content/high-contrast-white.png';
+      } else if (image.id === 'text-img') {
+        image.src = 'src/images/content/text-size-white.png';
+      }
+    });
+  } else {
+    // Przywrócenie oryginalnych URL obrazków dla większych ekranów
+    navImages.forEach(image => {
+      if (image.id === 'fb-img') {
+        image.src = 'src/images/content/logo-fb-simple1.png';
+      } else if (image.id === 'ig-img') {
+        image.src = 'src/images/content/logo-instagram1.png';
+      } else if (image.id === 'contrast-img') {
+        image.src = 'src/images/content/high-contrast.png';
+      } else if (image.id === 'text-img') {
+        image.src = 'src/images/content/text-size.png';
+      }
+    });
+  }
+}
+
+// Wywołaj funkcję toggleImageURLs przy załadowaniu strony oraz przy zmianie szerokości okna
+window.addEventListener('load', toggleImageURLs);
+window.addEventListener('resize', toggleImageURLs);

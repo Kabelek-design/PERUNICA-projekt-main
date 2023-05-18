@@ -1,5 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
+@font-face {
+    font-family: "im-feel, sans-serif";
+    src: url(../fonts/IMFellEnglish-Regular.ttf);
+}
+@font-face {
+    font-family: "im-feel-talic, sans-serif";
+    src: url(../fonts/IMFellEnglish-Italic.ttf);
+}
+@font-face {
+    font-family: "ann";
+    src: url(../fonts/AnonymousPro-Regular.ttf);
+}
 
 // X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
@@ -8,11 +18,30 @@ html {
 }
 
 @media (max-width: 389px) {
-
+    #scrollToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        opacity: 70%;
+      }
+      
+      #scrollToTopBtn:hover {
+        background-color: #444;
+      }
     body {
         background-image: url(../images/design/page-bg.png);
         color: black;
-        font-family: 'Anonymous Pro', serif;
+        font-family: $any-pro;
 
     }
 
@@ -37,6 +66,10 @@ html {
         justify-content: space-between;
         align-items: center;
         height: 62px;
+        img{
+            width: auto;
+            height: auto;
+        }
     }
 
     #navbar-info {
@@ -48,6 +81,7 @@ html {
 
     .navbar a {
         display: flex;
+        
     }
 
     .navbar #navbar a {
@@ -60,20 +94,21 @@ html {
 
     .navbar #navbar a {
         text-decoration: none;
-        font-family: 'IM FELL English';
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 36px;
         line-height: 193.4%;
         text-align: center;
         letter-spacing: -1.5px;
         color: #FFFFFF;
+        a:visited {
+            color: white;
+        }
     }
 
     .navbar #navbar-info a {
         text-decoration: none;
-        font-family: 'IM FELL English';
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 36px;
         line-height: 193.4%;
@@ -235,7 +270,7 @@ html {
 
     .navbar a {
         font-size: 1.5rem;
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
     }
 
@@ -320,7 +355,7 @@ html {
     }
 
     #img-if1 {
-        font-family: 'Anonymous Pro';
+        font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -349,7 +384,7 @@ display: none;
 
     #img-if1k {
         padding-top: 60px;
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -409,8 +444,7 @@ display: none;
             transform: translate(-50%, -50%);
             top: 4%;
             left: 50%;
-            font-family: 'IM FELL English';
-            font-style: italic;
+            font-family: "im-feel-talic, sans-serif";
             font-weight: 400;
             font-size: 22px;
             line-height: 100%;
@@ -442,8 +476,7 @@ display: none;
         top: 13%;
 
         left: 50%;
-        font-family: 'IM FELL English';
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 42px;
         line-height: 100%;
@@ -608,7 +641,7 @@ display: none;
         }
 
         p {
-            font-family: 'Anonymous Pro';
+        font-family: $any-pro;
             font-style: normal;
             font-weight: 400;
             padding-top: 24px;
@@ -626,7 +659,7 @@ display: none;
     }
 
     .opis-zwiedzanie {
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -642,7 +675,7 @@ display: none;
     }
 
     #zwiedzanie {
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 70px;
         line-height: 113.4%;
@@ -679,7 +712,7 @@ display: none;
 
         p {
             padding: 15px;
-            font-family: 'Anonymous Pro';
+        font-family: $any-pro;
             font-style: normal;
             font-weight: 400;
             font-size: 18px;
@@ -702,8 +735,7 @@ display: none;
             top: 9%;
             padding: 30px;
             left: 50%;
-            font-family: 'IM FELL English';
-            font-style: italic;
+            font-family: "im-feel-talic, sans-serif";
             font-weight: 400;
             font-size: 32px;
             line-height: 100%;
@@ -724,8 +756,7 @@ display: none;
             top: 5%;
             padding: 30px;
             left: 50%;
-            font-family: 'IM FELL English';
-            font-style: italic;
+            font-family: "im-feel-talic, sans-serif";
             font-weight: 400;
             font-size: 42px;
             line-height: 100%;
@@ -785,7 +816,7 @@ display: none;
     // }
     #kontakt-opis {
 
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -925,13 +956,9 @@ display: none;
         margin-top: 14px;
     }
 
-    .font-im1 {
-        font-family: "IM Fell English";
-        src: url("/fonts/IMFellEnglish-Regular.ttf") format("truetype");
-        unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F;
+    .font-im1 { font-family: "im-feel-talic, sans-serif";
         font-size: 50px;
         color: #BC8417;
-        font-style: italic;
         letter-spacing: -1.5px;
     }
 
@@ -1034,7 +1061,7 @@ display: none;
     .font-im3 {
         font-size: 97px;
         letter-spacing: -1.5px;
-        font-family: 'IM Fell English', serif;
+        font-family: "im-feel, sans-serif";
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 1px #CCC2B6;
         z-index: 10;
@@ -1166,7 +1193,7 @@ display: none;
         font-size: 17px;
         margin-top: 70px;
         color: #CCC2B6;
-        font-family: 'IM Fell English', serif;
+        font-family: "im-feel, sans-serif";
     }
 
     .font2-index {
@@ -1174,7 +1201,7 @@ display: none;
         margin-top: 140px;
         font-size: 17px;
         color: #CCC2B6;
-        font-family: 'IM Fell English', serif;
+        font-family: "im-feel, sans-serif";
     }
 
     #oferta {
@@ -1299,8 +1326,7 @@ display: none;
 
 
     #dziejesie {
-        font-family: 'IM FELL English';
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 43px;
         line-height: 113.4%;
@@ -1555,7 +1581,7 @@ display: none;
     }
 
     .opis {
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -1576,7 +1602,7 @@ display: none;
         border: 1px solid rgb(255, 255, 255);
         display: inline-block;
         cursor: pointer;
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 700;
         margin-top: 30px;
@@ -1655,13 +1681,32 @@ display: none;
     }
 }
 
-// Small devices (landscape phones, 576px and up)
-@media screen and (min-width: 390px) and (max-width: 767px) {
 
+@media screen and (min-width: 390px) and (max-width: 516px) {
+    #scrollToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        opacity: 70%;
+      }
+      
+      #scrollToTopBtn:hover {
+        background-color: #444;
+      }
     body {
         background-image: url(../images/design/page-bg.png);
         color: black;
-        font-family: 'Anonymous Pro', serif;
+        font-family: $any-pro;
 
     }
 
@@ -1709,20 +1754,25 @@ display: none;
 
     .navbar #navbar a {
         text-decoration: none;
-        font-family: 'IM FELL English';
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 36px;
         line-height: 193.4%;
         text-align: center;
         letter-spacing: -1.5px;
         color: #FFFFFF;
+        a:visited {
+            color: white;
+        }
+        img{
+            width: auto;
+            height: auto;
+        }
     }
 
     .navbar #navbar-info a {
         text-decoration: none;
-        font-family: 'IM FELL English';
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 36px;
         line-height: 193.4%;
@@ -1884,7 +1934,7 @@ display: none;
 
     .navbar a {
         font-size: 1.5rem;
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
     }
 
@@ -1969,7 +2019,7 @@ display: none;
     }
 
     #img-if1 {
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -1997,7 +2047,7 @@ display: none;
 
     #img-if1k {
         padding-top: 60px;
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -2057,8 +2107,7 @@ display: none;
             transform: translate(-50%, -50%);
             top: 13%;
             left: 50%;
-            font-family: 'IM FELL English';
-            font-style: italic;
+            font-family: "im-feel-talic, sans-serif";
             font-weight: 400;
             font-size: 42px;
             line-height: 100%;
@@ -2089,8 +2138,7 @@ display: none;
         transform: translate(-50%, -50%);
         top: 23%;
         left: 50%;
-        font-family: 'IM FELL English';
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 42px;
         line-height: 100%;
@@ -2252,7 +2300,7 @@ display: none;
         }
 
         p {
-            font-family: 'Anonymous Pro';
+        font-family: $any-pro;
             font-style: normal;
             font-weight: 400;
             padding-top: 24px;
@@ -2270,7 +2318,7 @@ display: none;
     }
 
     .opis-zwiedzanie {
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -2286,7 +2334,7 @@ display: none;
     }
 
     #zwiedzanie {
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 70px;
         line-height: 113.4%;
@@ -2323,7 +2371,7 @@ display: none;
 
         p {
             padding: 5px;
-            font-family: 'Anonymous Pro';
+        font-family: $any-pro;
             font-style: normal;
             font-weight: 400;
             font-size: 18px;
@@ -2346,8 +2394,7 @@ display: none;
             top: 21%;
             padding: 30px;
             left: 50%;
-            font-family: 'IM FELL English';
-            font-style: italic;
+            font-family: "im-feel-talic, sans-serif";
             font-weight: 400;
             font-size: 42px;
             line-height: 100%;
@@ -2368,8 +2415,7 @@ display: none;
             top: 7%;
             padding: 30px;
             left: 50%;
-            font-family: 'IM FELL English';
-            font-style: italic;
+            font-family: "im-feel-talic, sans-serif";
             font-weight: 400;
             font-size: 42px;
             line-height: 100%;
@@ -2418,7 +2464,7 @@ display: none;
     // }
     #kontakt-opis {
 
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -2555,13 +2601,10 @@ display: none;
         margin-top: 14px;
     }
 
-    .font-im1 {
-        font-family: "IM Fell English";
-        src: url("/fonts/IMFellEnglish-Regular.ttf") format("truetype");
-        unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F;
+    .font-im1 {        font-family: "im-feel-talic, sans-serif";
         font-size: 58px;
         color: #BC8417;
-        font-style: italic;
+
         letter-spacing: -1.5px;
     }
 
@@ -2569,10 +2612,7 @@ display: none;
         line-height: 61.4%;
         color: black;
         font-size: 62px;
-        letter-spacing: -3px;
-        font-family: "IM Fell English";
-        src: url("/fonts/IMFellEnglish-Regular.ttf") format("truetype");
-        unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F;
+        letter-spacing: -3px;        font-family: "im-feel, sans-serif";
     }
 
     .opis1-index {
@@ -2664,7 +2704,7 @@ display: none;
     .font-im3 {
         font-size: 97px;
         letter-spacing: -1.5px;
-        font-family: 'IM Fell English', serif;
+        font-family: "im-feel, sans-serif";
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 1px #CCC2B6;
         z-index: 10;
@@ -2797,7 +2837,7 @@ display: none;
         font-size: 21px;
         margin-top: 70px;
         color: #CCC2B6;
-        font-family: 'IM Fell English', serif;
+        font-family: "im-feel, sans-serif";
     }
 
     .font2-index {
@@ -2805,7 +2845,7 @@ display: none;
         margin-top: 140px;
         font-size: 20px;
         color: #CCC2B6;
-        font-family: 'IM Fell English', serif;
+        font-family: "im-feel, sans-serif";
     }
 
     #oferta {
@@ -2815,12 +2855,12 @@ display: none;
         flex-wrap: wrap;
         font-size: 60px;
         position: relative;
-        top: 50px;
+        top: 50px;font-family: "im-feel-talic, sans-serif";
     }
 
     #row-oferty {
         box-sizing: border-box;
-        margin: 70px 0 0 0;
+        margin: 0px 0px 84px 0px;
         width: 100%;
         display: flex;
         flex: 0 1 auto;
@@ -2888,6 +2928,7 @@ display: none;
 
     .row:first-child .hexagon:nth-child(3) {
         width: 44%;
+        top: 45px;
     }
 
     .row:last-child .hexagon:nth-child(3) {
@@ -2930,8 +2971,7 @@ display: none;
 
 
     #dziejesie {
-        font-family: 'IM FELL English';
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 43px;
         line-height: 113.4%;
@@ -3050,7 +3090,7 @@ display: none;
     }
 
     #updates {
-        margin-top: 60px;
+        margin-top: 80px;
         padding: 0;
         max-width: 100%;
     }
@@ -3187,7 +3227,7 @@ display: none;
     }
 
     .opis {
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -3208,7 +3248,1652 @@ display: none;
         border: 1px solid rgb(255, 255, 255);
         display: inline-block;
         cursor: pointer;
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
+        font-style: normal;
+        font-weight: 700;
+        margin-top: 30px;
+        font-size: 16px;
+        line-height: 29px;
+        /* identical to box height, or 161% */
+
+        letter-spacing: -0.5px;
+
+        /* Colors/White */
+
+        color: #FFFFFF;
+        padding: 11px 32px;
+        text-decoration: none;
+    }
+
+    .button3-index:hover {
+        background-color: #EE2F41;
+        color: white;
+        transition: 0.5s;
+        border: 1px solid #EE2F41;
+    }
+
+    .bulwa {
+        position: relative;
+        bottom: 200px;
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+    .runa-mz {
+
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+        bottom: 20% !important;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+}
+@media screen and (min-width: 475px) and (max-width: 767px) {
+    #scrollToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        opacity: 70%;
+      }
+      
+      #scrollToTopBtn:hover {
+        background-color: #444;
+      }
+    body {
+        background-image: url(../images/design/page-bg.png);
+        color: black;
+        font-family: $any-pro;
+
+    }
+
+    // wysoki kontrast strony
+
+
+
+    header {
+        height: 928px;
+        background-image: url(../images/design/perun.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    #navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 62px;
+    }
+
+    #navbar-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 62px;
+    }
+
+    .navbar a {
+        display: flex;
+    }
+
+    .navbar #navbar a {
+        list-style: none;
+    }
+
+    .navbar #navbar-info a {
+        list-style: none;
+    }
+
+    .navbar #navbar a {
+        text-decoration: none;
+        font-family: "im-feel-talic, sans-serif";
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 193.4%;
+        text-align: center;
+        letter-spacing: -1.5px;
+        color: #FFFFFF;
+        a:visited {
+            color: white;
+        }
+        img{
+            width: auto;
+            height: auto;
+        }
+    }
+
+    .navbar #navbar-info a {
+        text-decoration: none;
+        font-family: "im-feel-talic, sans-serif";
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 193.4%;
+        text-align: center;
+        letter-spacing: -1.5px;
+        color: #FFFFFF;
+    }
+
+    .navbar #navbar a:hover {
+        font-weight: bolder;
+    }
+
+    .navbar #navbar-info a:hover {
+        font-weight: bolder;
+    }
+
+    #navbar {
+        display: block;
+        position: relative;
+        height: 60px;
+    }
+
+    #navbar-info {
+        display: block;
+        position: relative;
+        height: 60px;
+    }
+
+    #navbar .checkbox {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 32px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    #navbar-info .checkbox {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 32px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    #navbar .hamburger-lines {
+        display: block;
+        height: 26px;
+        width: 32px;
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #navbar-info .hamburger-lines {
+        display: block;
+        height: 26px;
+        width: 32px;
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #navbar .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #0e2431;
+    }
+
+    #navbar-info .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #0e2431;
+    }
+
+    #navbar .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    #navbar-info .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    #navbar .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    #navbar-info .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    #navbar .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    #navbar-info .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .navbar a {
+        box-shadow: inset 0 0 2000px #0F0C07;
+        height: 6vh;
+        width: 100%;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.5s ease-in-out;
+
+    }
+
+    #fb-img {
+        width: 40px;
+        height: 40px;
+
+        img {
+            src: url(../images/content/logo-fb-simple-gold.png);
+        }
+    }
+
+    #ig-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #contrast-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #text-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar a {
+        font-size: 1.5rem;
+        font-family: "im-feel-talic, sans-serif";
+        font-weight: 400;
+    }
+
+    .navbar-brand {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        font-size: 1.2rem;
+        color: #0e2431;
+    }
+
+    #navbar input[type="checkbox"]:checked~a {
+        transform: translateX(0);
+    }
+
+    #navbar input[type="checkbox"]:checked~.hamburger-lines .line1 {
+        transform: rotate(45deg);
+    }
+
+    #navbar input[type="checkbox"]:checked~.hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+
+    #navbar input[type="checkbox"]:checked~.hamburger-lines .line3 {
+        transform: rotate(-45deg);
+    }
+
+    #navbar input[type="checkbox"]:checked~.navbar-brand {
+        display: none;
+    }
+
+    #linia {
+        display: none;
+    }
+
+    #linia1 {
+        display: none;
+    }
+
+    // navbar podstron
+    #navbar-info {
+        background-color: #00000063;
+        font-weight: bold;
+        font-size: 18px;
+        position: fixed;
+        display: flex;
+        z-index: 1111;
+        flex-wrap: inherit;
+        align-items: center;
+        color: white;
+        justify-content: space-evenly;
+        align-content: space-between;
+
+    }
+    .bg-kolo {
+        background-image: url(../images/content/bg-kolo2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 608px;    background-position-x: 51%;
+
+        #navbar a {
+            color: white;
+        }
+    }
+
+    .bg-info {
+        background-image: url(../images/content/if-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 608px;
+        background-position-x: -622px;
+
+        #navbar a {
+            color: white;
+        }
+    }
+
+    #img-if2 {
+        position: relative;
+        bottom: -10px;
+        width: 100%;
+    }
+
+    #img-if1 {
+    font-family: $any-pro;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        text-align: center;
+        /* or 178% */
+        width: 100%;
+        letter-spacing: -1px;
+
+        /* Colors/Black */
+        .col-6 {
+            width: 53.33333333% !important;
+        }
+
+        color: #0F0C07;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    #galazka-kont {
+ display: none;
+    }
+
+    #img-if1k {
+        padding-top: 60px;
+    font-family: $any-pro;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        width: 100% !important;
+        text-align: center;
+        /* or 178% */
+
+        letter-spacing: -1px;
+
+        /* Colors/Black */
+
+        color: #0F0C07;
+
+        span {
+            font-weight: 700;
+        }
+
+        br {
+            display: none;
+        }
+
+        p {
+            padding: 2px !important;
+        }
+    }
+
+    .linki {
+        padding-top: 50px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+
+    .info-turystyczna {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+
+        .row {
+            flex-direction: column-reverse;
+            align-content: center;
+        }
+    }
+
+    .info-turystyczna4 {
+        h1 {
+            margin-top: 170px;
+        }
+    }
+
+    #card {
+        width: 550px;
+
+        .card-title {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 13%;
+            left: 50%;
+            font-family: "im-feel-talic, sans-serif";
+            font-weight: 400;
+            font-size: 42px;
+            line-height: 100%;
+            /* identical to box height, or 42px */
+            text-align: center;
+            letter-spacing: -1.5px;
+            /* Colors/White */
+            color: #FFFFFF;
+            text-shadow: 0px 4px 14px #000000;
+            width: 100%;
+
+        }
+    }
+
+    .card {
+        position: relative;
+        width: 400px;
+        background-color: rgba(255, 255, 255, 0.473);
+    }
+
+    .card img {
+        width: 100%;
+        display: block;
+    }
+
+    .card-title {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 23%;
+        left: 50%;
+        font-family: "im-feel-talic, sans-serif";
+        font-weight: 400;
+        font-size: 42px;
+        line-height: 100%;
+        /* identical to box height, or 42px */
+
+        text-align: center;
+        letter-spacing: -1.5px;
+
+        /* Colors/White */
+
+        color: #FFFFFF;
+
+        text-shadow: 0px 4px 14px #000000;
+
+        width: 100%;
+    }
+
+    .card-text {
+        margin-top: 20px;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .info-turystyczna3 {
+        background-image: url(../images/content/bg-if.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 564px;
+        display: flex;
+        justify-content: center;
+
+        #col-if1 {
+            display: none;
+        }
+
+        #colcol {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            h1 {
+                margin-top: 50px;
+            }
+
+            p {
+                margin-top: 50px;
+            }
+        }
+
+        img {
+            position: relative;
+        }
+
+        #button-kontakt {
+            margin-top: 70px;
+        }
+
+    }
+
+    .info-turystyczna5 {
+        p {
+            font-weight: 700;
+            padding-top: 20px;
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+    }
+
+    #if-img1 {
+        bottom: 80px;
+    }
+
+    #if-img2 {
+        bottom: 370px;
+        left: 150px;
+        z-index: 1111;
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+    #if-img3 {
+        bottom: 450px;
+        left: 110px;
+    }
+
+    #if-img4 {
+        bottom: 180px;
+        z-index: 14;
+    }
+
+    #if-img5 {
+        bottom: 380px;
+        right: 0px;
+        z-index: 11;
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+    #if-img6 {}
+
+    .info-turystyczna2 {
+        background-color: #fff;
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+
+        span {
+            font-weight: 700;
+        }
+
+        p {
+        font-family: $any-pro;
+            font-style: normal;
+            font-weight: 400;
+            padding-top: 24px;
+            font-size: 18px;
+            line-height: 22px;
+            /* or 122% */
+
+            text-align: center;
+            letter-spacing: -1.5px;
+
+            /* Colors/Black */
+
+            color: #0F0C07;
+        }
+    }
+
+    .opis-zwiedzanie {
+    font-family: $any-pro;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        /* or 178% */
+
+        text-align: center;
+        letter-spacing: -0.5px;
+
+        /* Colors/White */
+
+        color: #FFFFFF;
+    }
+
+    #zwiedzanie {
+        font-family: "im-feel-talic, sans-serif";
+        font-weight: 400;
+        font-size: 70px;
+        line-height: 113.4%;
+        /* or 79px */
+
+        text-align: center;
+        letter-spacing: -1.5px;
+
+        /* Colors/Gold2 */
+
+        color: #BC8417;
+    }
+
+    .bg-odkryj {
+        background-image: url(../images/content/odkryj-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 608px;
+    }
+
+    .bg-kulinarny {
+        background-image: url(../images/content/szlak-kul-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 608px;background-position-x: 46%;
+
+        #navbar a {
+            color: white;
+        }
+    }
+
+    #kul-bg {
+        background-image: url(../images/design/page-bg.png);
+
+        p {
+            padding: 5px;
+        font-family: $any-pro;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 32px;
+            /* or 178% */
+
+            letter-spacing: -1px;
+
+            /* Colors/Black */
+
+            color: #0F0C07;
+        }
+
+    }
+
+    #kul-info {
+        #card-title {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 21%;
+            padding: 30px;
+            left: 50%;
+            font-family: "im-feel-talic, sans-serif";
+            font-weight: 400;
+            font-size: 42px;
+            line-height: 100%;
+            /* identical to box height, or 42px */
+            text-align: center;
+            letter-spacing: -1.5px;
+            /* Colors/White */
+            color: #FFFFFF;
+            text-shadow: 0px 4px 14px #000000;
+            width: 100%;
+        }
+    }
+
+    #kolo-info {
+        #card-title {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 7%;
+            padding: 30px;
+            left: 50%;
+            font-family: "im-feel-talic, sans-serif";
+            font-weight: 400;
+            font-size: 42px;
+            line-height: 100%;
+            /* identical to box height, or 42px */
+            text-align: center;
+            letter-spacing: -1.5px;
+            /* Colors/White */
+            color: #FFFFFF;
+            text-shadow: 0px 4px 14px #000000;
+            width: 100%;
+        }
+    }
+
+    #oferta-odkryj {
+        padding: 13px 32px;
+        font-size: 15px;
+    }
+
+    #card-text-toggle-btn {
+        z-index: 1111;
+    }
+
+    .carousel-item img {
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+
+    .bg-kontakt {
+        background-image: url(../images/content/szlak-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: 58%;
+        height: 608px;
+
+        #navbar a {
+            color: white;
+        }
+    }
+
+    // #kontakt-info{
+    //     justify-content: space-evenly !important;
+    //     display: flex !important;
+    //     margin: 50px;
+    // }
+    #kontakt-opis {
+
+    font-family: $any-pro;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 36px;
+        /* or 200% */
+
+        letter-spacing: -0.5px;
+
+        /* Colors/Black */
+
+        color: #0F0C07;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    .images-kontakt img {
+        position: absolute;
+    }
+
+    .image1 {
+        left: 120px;
+        top: 500px;
+    }
+
+    .image2 {
+        right: 40px;
+        top: 380px;
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+    .bg-team {
+        background-image: url(../images/content/team-build.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 49%;
+        background-position-x: 63%;
+        height: 608px;
+
+        #navbar a {
+            color: white;
+        }
+    }
+
+    .bg-czarownice {
+        background-image: url(../images/content/czarownice-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 69%;
+        background-position-x: 47%;
+        height: 608px;
+
+        #navbar a {
+            color: white;
+        }
+    }
+
+    #powrot-oferta-black {
+        padding: 14px 32px;
+        padding-left: 24px;
+        text-align: center;
+        background-color: transparent;
+        color: #000000;
+        font-family: "Anonymous Pro", monospace;
+        font-weight: normal;
+        border: 1px solid #000000;
+        font-size: 15px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #powrot-oferta-black:hover {
+        background-color: #000000d3;
+        border: 1px #000000d7;
+        color: #ffffff;
+    }
+
+    #powrot-oferta {
+        padding: 14px 32px;
+        padding-left: 24px;
+        margin-left: 28px;
+        margin-top: 25px;
+
+        margin-right: 24px;
+        background-color: transparent;
+        color: #fff;
+        font-family: "Anonymous Pro", monospace;
+        font-weight: normal;
+        border: 1px solid #fff;
+        font-size: 15px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #powrot-oferta:hover {
+        background-color: #ffffff92;
+        border: 1px #ffffff92;
+        color: #000000;
+    }
+
+    #linia {
+        height: 2px;
+        width: 120px;
+        margin-top: 14px;
+    }
+
+    #linia1 {
+        height: 2px;
+        width: 120px;
+        margin-top: 14px;
+    }
+
+    .font-im1 {        font-family: "im-feel-talic, sans-serif";
+        font-size: 58px;
+        color: #BC8417;
+
+        letter-spacing: -1.5px;
+    }
+
+    .font-im2 {
+        line-height: 61.4%;
+        color: black;
+        font-size: 62px;
+        letter-spacing: -3px;        font-family: "im-feel, sans-serif";
+    }
+
+    .opis1-index {
+        font-size: 16px;
+    }
+
+    .delete-br {
+        br {
+            display: none;
+        }
+    }
+
+    b {
+        font-weight: bold;
+    }
+
+    .btns {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .btns a {
+        margin: 0px;
+    }
+
+    .button1-index {
+        background-color: #BC8417;
+        border: 1px solid #BC8417;
+        display: inline-block;
+        cursor: pointer;
+        color: white;
+        font-family: Arial;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 16px;
+        letter-spacing: -0.5px;
+        text-decoration: none;
+    }
+
+    .button2-index {
+        background-color: transparent;
+        border: 1px solid black;
+        display: inline-block;
+        cursor: pointer;
+        color: black;
+        font-family: Arial;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: -0.5px;
+        padding: 10px 16px;
+        text-decoration: none;
+    }
+
+    .button2-index:hover {
+        background-color: black;
+        color: white;
+        transition: 0.5s;
+    }
+
+    .button1-index:hover {
+        background-color: #ffffff;
+        border-color: #BC8417;
+        color: #BC8417;
+        transition: 0.5s;
+    }
+
+
+    .dot {
+        color: #BC8417;
+    }
+
+    main {
+        background-color: #0f0c07;
+        height: 794px;
+
+
+    }
+
+    #footer-opis {
+        display: grid !important;
+        justify-content: center
+    }
+
+    #col2 {
+        display: grid !important;
+        justify-content: center
+    }
+
+    .font-im3 {
+        font-size: 97px;
+        letter-spacing: -1.5px;
+        font-family: "im-feel, sans-serif";
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px #CCC2B6;
+        z-index: 10;
+        transform: rotate(-90deg);
+        position: relative;
+        top: -1262px;
+        left: 347px;
+        display: none;
+
+    }
+
+    #korzen {
+        display: none;
+        position: relative;
+        z-index: 11;
+        top: -1389px;
+        left: 647px;
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+    #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+
+
+
+ 
+    .absolute1 {
+        z-index: 1;
+        width: 242px;
+        left: -78px;
+        top: 155px;
+    }
+
+    .absolute2 {
+        z-index: 2;
+        bottom: -138px;
+        left: -160px;
+        width: 172px;
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+    .absolute3 {
+        z-index: 3;
+        width: 261px;
+        left: 126px;
+        bottom: 281px;
+    
+    }
+
+    .absolute4 {
+        z-index: 4;
+        width: 50px;
+        bottom: 489px;
+        left: 5px;
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+    #container1 .font1-index .font2-index {
+        position: relative;
+    }
+
+    .font1-index {
+        font-size: 21px;
+        margin-top: 70px;
+        color: #CCC2B6;
+        font-family: "im-feel, sans-serif";
+    }
+
+    .font2-index {
+        margin-left: -307px;
+        margin-top: 140px;
+        font-size: 20px;
+        color: #CCC2B6;
+        font-family: "im-feel, sans-serif";
+    }
+
+    #oferta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 60px;
+        position: relative;
+        top: 50px;font-family: "im-feel-talic, sans-serif";
+    }
+
+    #row-oferty {
+        box-sizing: border-box;
+        margin: 0px 0px 84px 0px;
+        width: 100%;
+        display: flex;
+        flex: 0 1 auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hexagon {
+        height: 109px;
+        margin: 19px;
+        position: relative;
+    }
+
+    #container1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .col-md-4 {
+            width: 49.333333%;
+        }
+
+        .row {
+            justify-content: center !important;
+        }
+    }
+
+    #container1 .row {
+        justify-content: center !important;
+    }
+
+    #container img {
+        position: relative;
+    }
+
+
+    .hexagon img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .row:first-child .hexagon:nth-child(1),
+    .row:first-child .hexagon:nth-child(2),
+    .row:last-child .hexagon:nth-child(1),
+    .row:last-child .hexagon:nth-child(2) {
+        width: 44%;
+    }
+
+    .row:first-child .hexagon:nth-child(1),
+    .row:last-child .hexagon:nth-child(1) {
+        margin-right: 2%;
+        margin-left: 4%;
+    }
+
+    .row:first-child .hexagon:nth-child(2),
+    .row:last-child .hexagon:nth-child(2) {
+        margin-left: 2%;
+        margin-right: 4%;
+    }
+
+    .row:first-child .hexagon:nth-child(3) {
+        width: 44%;
+        top: 45px;
+    }
+
+    .row:last-child .hexagon:nth-child(3) {
+        margin-right: 4%;
+        margin-left: 4%;
+    }
+
+    .row:first-child .hexagon:nth-child(4),
+    .row:last-child .hexagon:nth-child(4),
+    .row:first-child .hexagon:nth-child(5),
+    .row:last-child .hexagon:nth-child(5) {
+        display: none;
+    }
+
+    .hexagon:hover img {
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+
+
+    #dziejesie {
+        font-family: "im-feel-talic, sans-serif";
+        font-weight: 400;
+        font-size: 43px;
+        line-height: 113.4%;
+        /* identical to box height, or 49px */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        letter-spacing: -1.5px;
+    }
+
+    #aktualnosci {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 100%;
+        text-align: center;
+        letter-spacing: -3px;
+    }
+
+    #runa1 {
+        position: absolute;
+        display: none;
+        left: 62px;
+        top: 2777px;
+        z-index: -2;
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+    }
+
+    #runa2 {
+        position: absolute;
+        display: none;
+        right: 100px;
+        top: 2670px;
+        z-index: -2;
+        -webkit-animation: action 1s infinite alternate;
+        animation: action 1s infinite alternate;
+
+        @-webkit-keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes action {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+    #galazka {
+        position: absolute;
+        top: 2676px;
+        width: 467px;
+        z-index: -1;
+        display: none;
+    }
+
+    #misa {
+        position: absolute;
+        display: none;
+        right: 27px;
+        top: 2780px;
+        width: 281px;
+        z-index: -1;
+    }
+
+    #ac62e217_1612293957 {
+        z-index: 10;
+        margin-top: 50px;
+    }
+
+    .fb-like {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        width: 100%;
+    }
+
+    #updates {
+        margin-top: 80px;
+        padding: 0;
+        max-width: 100%;
+    }
+
+
+
+    #welesowy {
+        height: 572px;
+        background-image: url(../images/content/bg-welesowy.jpg);
+
+        img {
+            display: none;
+        }
+
+        #colcol1 {
+            display: none;
+        }
+
+        #colcol2 {
+            display: none;
+        }
+    }
+
+    .welesowy {
+        font-family: 'IM FELL English';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 52px;
+        line-height: 113.4%;
+        /* identical to box height, or 59px */
+
+        text-align: center;
+        letter-spacing: -1.5px;
+
+        color: #EE2F41;
+    }
+
+    #logo-byka {
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+
+    #talk {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        color: #ffffff;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 52px;
+        line-height: 100%;
+        text-align: center;
+        letter-spacing: -3px;
+    }
+
+
+    #linia2 {
+        display: none;
+    }
+
+    .box-footer {
+        padding-top: 10px;
+
+    }
+
+    #footer1 {
+        text-align: center !important;
+        padding: 0 !important;
+    }
+
+    #footer2 {
+        text-align: center !important;
+        padding: 0 !important;
+    }
+
+    #footer3 {
+        max-width: 100% !important;
+    }
+
+    #footer-wrap {
+        flex-direction: column !important;
+    }
+
+    #md7-footer {
+        text-align: center;
+    }
+
+    .footer-center {
+        display: flex !important;
+        width: 50%;
+        position: relative;
+        left: 118px;
+
+        .col {
+            flex-basis: content !important;
+        }
+    }
+
+    #flex-footer-center {
+        padding: 0 !important;
+        display: flex;
+        font-size: 13px !important;
+    }
+
+    #obraz-weles {
+        bottom: 30% !important;
+        left: 2% !important;
+        width: 217px;
+    }
+
+    #obraz-weles-1 {
+        bottom: 10% !important;
+        width: 239px !important;
+    }
+
+    #obraz-weles-2 {
+        left: 20% !important;
+        width: 250px !important;
+        bottom: 8% !important;
+    }
+
+    .weles-footer {
+        padding-top: 94px;
+    }
+
+    footer {
+        background-color: #070603;
+
+        span {
+            opacity: 50%;
+        }
+    }
+
+    .opis {
+    font-family: $any-pro;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px !important;
+        color: #FFFFFF;
+        text-align: center;
+        letter-spacing: -0.5px;
+        padding: 4% !important;
+    }
+
+    .col {
+        line-height: 36px;
+        font-size: 18px;
+    }
+
+    .button3-index {
+        background-color: transparent;
+        border: 1px solid rgb(255, 255, 255);
+        display: inline-block;
+        cursor: pointer;
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 700;
         margin-top: 30px;
@@ -3287,13 +4972,32 @@ display: none;
     }
 }
 
-// Medium devices (tablets, 768px and up)
-@media screen and (min-width: 768px) and (max-width: 991px) {
 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #scrollToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        opacity: 70%;
+      }
+      
+      #scrollToTopBtn:hover {
+        background-color: #444;
+      }
     body {
         background-image: url(../images/design/page-bg.png);
         color: black;
-        font-family: 'Anonymous Pro', serif;
+        font-family: $any-pro;
 
     }
 
@@ -3388,7 +5092,7 @@ display: none;
     }
 
     #img-if1 {
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -3419,7 +5123,7 @@ display: none;
 
     #img-if1k {
 
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -3479,8 +5183,7 @@ display: none;
             transform: translate(-50%, -50%);
             top: 13%;
             left: 50%;
-            font-family: 'IM FELL English';
-            font-style: italic;
+            font-family: "im-feel-talic, sans-serif";
             font-weight: 400;
             font-size: 42px;
             line-height: 100%;
@@ -3511,8 +5214,7 @@ display: none;
         transform: translate(-50%, -50%);
         top: 23%;
         left: 50%;
-        font-family: 'IM FELL English';
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 42px;
         line-height: 100%;
@@ -3676,7 +5378,7 @@ display: none;
         }
 
         p {
-            font-family: 'Anonymous Pro';
+        font-family: $any-pro;
             font-style: normal;
             font-weight: 400;
             padding-top: 24px;
@@ -3694,7 +5396,7 @@ display: none;
     }
 
     .opis-zwiedzanie {
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -3710,7 +5412,7 @@ display: none;
     }
 
     #zwiedzanie {
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 70px;
         line-height: 113.4%;
@@ -3751,7 +5453,7 @@ display: none;
 
         p {
             padding: 15px;
-            font-family: 'Anonymous Pro';
+        font-family: $any-pro;
             font-style: normal;
             font-weight: 400;
             font-size: 18px;
@@ -3774,8 +5476,7 @@ display: none;
             top: 21%;
             padding: 30px;
             left: 50%;
-            font-family: 'IM FELL English';
-            font-style: italic;
+            font-family: "im-feel-talic, sans-serif";
             font-weight: 400;
             font-size: 42px;
             line-height: 100%;
@@ -3796,8 +5497,7 @@ display: none;
             top: 13%;
             padding: 30px;
             left: 50%;
-            font-family: 'IM FELL English';
-            font-style: italic;
+            font-family: "im-feel-talic, sans-serif";
             font-weight: 400;
             font-size: 42px;
             line-height: 100%;
@@ -3846,7 +5546,7 @@ display: none;
     // }
     #kontakt-opis {
 
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -3981,13 +5681,10 @@ display: none;
         margin-top: 14px;
     }
 
-    .font-im1 {
-        font-family: "IM Fell English";
-        src: url("/fonts/IMFellEnglish-Regular.ttf") format("truetype");
-        unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F;
+    .font-im1 {       
         font-size: 80px;
         color: #BC8417;
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         letter-spacing: -1.5px;
 
     }
@@ -4001,9 +5698,7 @@ display: none;
         color: black;
         font-size: 104px;
         letter-spacing: -3px;
-        font-family: "IM Fell English";
-        src: url("/fonts/IMFellEnglish-Regular.ttf") format("truetype");
-        unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F;
+        font-family: "im-feel, sans-serif";
     }
 
     .opis1-index {
@@ -4090,7 +5785,7 @@ display: none;
     .font-im3 {
         font-size: 97px;
         letter-spacing: -1.5px;
-        font-family: 'IM Fell English', serif;
+        font-family: "im-feel, sans-serif";
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 1px #CCC2B6;
         z-index: 10;
@@ -4221,7 +5916,7 @@ display: none;
         margin-top: 170px;
         margin-left: 335px;
         color: #CCC2B6;
-        font-family: 'IM Fell English', serif;
+        font-family: "im-feel, sans-serif";
     }
 
     .font2-index {
@@ -4229,11 +5924,12 @@ display: none;
         margin-top: 228px;
         font-size: 20px;
         color: #CCC2B6;
-        font-family: 'IM Fell English', serif;
+        font-family: "im-feel, sans-serif";
     }
 
     #oferta {
         display: flex;
+        font-family: "im-feel-talic, sans-serif";
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
@@ -4356,8 +6052,7 @@ display: none;
 
 
     #dziejesie {
-        font-family: 'IM FELL English';
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 43px;
         line-height: 113.4%;
@@ -4578,7 +6273,7 @@ display: none;
     }
 
     .opis {
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -4599,7 +6294,7 @@ display: none;
         border: 1px solid rgb(255, 255, 255);
         display: inline-block;
         cursor: pointer;
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 700;
         margin-top: 72px;
@@ -4678,13 +6373,32 @@ display: none;
     }
 }
 
-// Large devices (desktops, 992px and up)
-@media screen and (min-width: 992px) and (max-width: 1199px) {
 
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    #scrollToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        opacity: 70%;
+      }
+      
+      #scrollToTopBtn:hover {
+        background-color: #444;
+      }
     body {
         background-image: url(../images/design/page-bg.png);
         color: black;
-        font-family: 'Anonymous Pro', serif;
+        font-family: $any-pro;
 
     }
 
@@ -4779,7 +6493,7 @@ display: none;
 
     #img-if1 {
         padding: 80px;
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -4806,7 +6520,7 @@ display: none;
 
     #img-if1k {
         padding-left: 50px;
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -4853,8 +6567,7 @@ display: none;
             transform: translate(-50%, -50%);
             top: 13%;
             left: 50%;
-            font-family: 'IM FELL English';
-            font-style: italic;
+            font-family: "im-feel-talic, sans-serif";
             font-weight: 400;
             font-size: 42px;
             line-height: 100%;
@@ -4885,8 +6598,7 @@ display: none;
         transform: translate(-50%, -50%);
         top: 23%;
         left: 50%;
-        font-family: 'IM FELL English';
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 42px;
         line-height: 100%;
@@ -5047,7 +6759,7 @@ display: none;
         }
 
         p {
-            font-family: 'Anonymous Pro';
+        font-family: $any-pro;
             font-style: normal;
             font-weight: 400;
             padding-top: 24px;
@@ -5065,7 +6777,7 @@ display: none;
     }
 
     .opis-zwiedzanie {
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -5081,7 +6793,7 @@ display: none;
     }
 
     #zwiedzanie {
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 70px;
         line-height: 113.4%;
@@ -5122,7 +6834,7 @@ display: none;
 
         p {
             padding: 15px;
-            font-family: 'Anonymous Pro';
+        font-family: $any-pro;
             font-style: normal;
             font-weight: 400;
             font-size: 18px;
@@ -5145,8 +6857,7 @@ display: none;
             top: 21%;
             padding: 30px;
             left: 50%;
-            font-family: 'IM FELL English';
-            font-style: italic;
+            font-family: "im-feel-talic, sans-serif";
             font-weight: 400;
             font-size: 42px;
             line-height: 100%;
@@ -5167,8 +6878,7 @@ display: none;
             top: 13%;
             padding: 30px;
             left: 50%;
-            font-family: 'IM FELL English';
-            font-style: italic;
+            font-family: "im-feel-talic, sans-serif";
             font-weight: 400;
             font-size: 42px;
             line-height: 100%;
@@ -5217,7 +6927,7 @@ display: none;
     // }
     #kontakt-opis {
 
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -5351,13 +7061,10 @@ display: none;
         margin-top: 14px;
     }
 
-    .font-im1 {
-        font-family: "IM Fell English";
-        src: url("/fonts/IMFellEnglish-Regular.ttf") format("truetype");
-        unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F;
+    .font-im1 {         font-family: "im-feel-talic, sans-serif";
         font-size: 80px;
         color: #BC8417;
-        font-style: italic;
+
         letter-spacing: -1.5px;
     }
 
@@ -5365,10 +7072,7 @@ display: none;
         line-height: 61.4%;
         color: black;
         font-size: 134px;
-        letter-spacing: -3px;
-        font-family: "IM Fell English";
-        src: url("/fonts/IMFellEnglish-Regular.ttf") format("truetype");
-        unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F;
+        letter-spacing: -3px;        font-family: "im-feel, sans-serif";
     }
 
     .opis1-index {
@@ -5439,7 +7143,7 @@ display: none;
     .font-im3 {
         font-size: 127px;
         letter-spacing: -1.5px;
-        font-family: 'IM Fell English', serif;
+        font-family: "im-feel, sans-serif";
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 1px #CCC2B6;
         z-index: 10;
@@ -5579,7 +7283,7 @@ display: none;
         margin-top: 170px;
         margin-left: 555px;
         color: #CCC2B6;
-        font-family: 'IM Fell English', serif;
+        font-family: "im-feel, sans-serif";
     }
 
     .font2-index {
@@ -5587,11 +7291,11 @@ display: none;
         margin-top: 228px;
         font-size: 26px;
         color: #CCC2B6;
-        font-family: 'IM Fell English', serif;
+        font-family: "im-feel, sans-serif";
     }
 
     #oferta {
-        display: flex;
+        display: flex;        font-family: "im-feel-talic, sans-serif";
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
@@ -5646,8 +7350,7 @@ display: none;
 
 
     #dziejesie {
-        font-family: 'IM FELL English';
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 43px;
         line-height: 113.4%;
@@ -5838,7 +7541,7 @@ display: none;
     }
 
     .opis {
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -5859,7 +7562,7 @@ display: none;
         border: 1px solid rgb(255, 255, 255);
         display: inline-block;
         cursor: pointer;
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 700;
         font-size: 16px;
@@ -5937,13 +7640,32 @@ display: none;
     }
 }
 
-// X-Large devices (large desktops, 1200px and up)
-@media screen and (min-width: 1200px) and (max-width: 1399px) {
 
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    #scrollToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        opacity: 70%;
+      }
+      
+      #scrollToTopBtn:hover {
+        background-color: #444;
+      }
     body {
         background-image: url(../images/design/page-bg.png);
         color: black;
-        font-family: 'Anonymous Pro', serif;
+        font-family: $any-pro;
 
     }
 
@@ -6026,6 +7748,7 @@ display: none;
 
         #navbar a {
             color: white;
+            font-family: $any-pro;
         }
     }
 
@@ -6037,7 +7760,7 @@ display: none;
 
     #img-if1 {
         padding: 80px;
-        font-family: 'Anonymous Pro';
+        font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -6064,7 +7787,7 @@ display: none;
 
     #img-if1k {
         padding-left: 50px;
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -6110,8 +7833,7 @@ display: none;
             transform: translate(-50%, -50%);
             top: 13%;
             left: 50%;
-            font-family: 'IM FELL English';
-            font-style: italic;
+            font-family: "im-feel-talic, sans-serif";
             font-weight: 400;
             font-size: 42px;
             line-height: 100%;
@@ -6142,8 +7864,7 @@ display: none;
         transform: translate(-50%, -50%);
         top: 23%;
         left: 50%;
-        font-family: 'IM FELL English';
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 42px;
         line-height: 100%;
@@ -6302,7 +8023,7 @@ display: none;
         }
 
         p {
-            font-family: 'Anonymous Pro';
+        font-family: $any-pro;
             font-style: normal;
             font-weight: 400;
             padding-top: 24px;
@@ -6320,7 +8041,7 @@ display: none;
     }
 
     .opis-zwiedzanie {
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -6336,7 +8057,7 @@ display: none;
     }
 
     #zwiedzanie {
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 70px;
         line-height: 113.4%;
@@ -6377,7 +8098,7 @@ display: none;
 
         p {
             padding: 15px;
-            font-family: 'Anonymous Pro';
+        font-family: $any-pro;
             font-style: normal;
             font-weight: 400;
             font-size: 18px;
@@ -6400,8 +8121,7 @@ display: none;
             top: 21%;
             padding: 30px;
             left: 50%;
-            font-family: 'IM FELL English';
-            font-style: italic;
+            font-family: "im-feel-talic, sans-serif";
             font-weight: 400;
             font-size: 42px;
             line-height: 100%;
@@ -6422,8 +8142,7 @@ display: none;
             top: 13%;
             padding: 30px;
             left: 50%;
-            font-family: 'IM FELL English';
-            font-style: italic;
+            font-family: "im-feel-talic, sans-serif";
             font-weight: 400;
             font-size: 42px;
             line-height: 100%;
@@ -6472,7 +8191,7 @@ display: none;
     // }
     #kontakt-opis {
 
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -6606,13 +8325,10 @@ display: none;
         margin-top: 14px;
     }
 
-    .font-im1 {
-        font-family: "IM Fell English";
-        src: url("/fonts/IMFellEnglish-Regular.ttf") format("truetype");
-        unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F;
+    .font-im1 {       
         font-size: 90px;
         color: #BC8417;
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         letter-spacing: -1.5px;
     }
 
@@ -6620,10 +8336,7 @@ display: none;
         line-height: 61.4%;
         color: black;
         font-size: 154px;
-        letter-spacing: -3px;
-        font-family: "IM Fell English";
-        src: url("/fonts/IMFellEnglish-Regular.ttf") format("truetype");
-        unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F;
+        letter-spacing: -3px;        font-family: "im-feel, sans-serif";
     }
 
     .opis1-index {
@@ -6694,7 +8407,7 @@ display: none;
     .font-im3 {
         font-size: 137px;
         letter-spacing: -1.5px;
-        font-family: 'IM Fell English', serif;
+        font-family: "im-feel, sans-serif";
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 1px #CCC2B6;
         z-index: 10;
@@ -6834,7 +8547,7 @@ display: none;
         margin-top: 240px;
         margin-left: 555px;
         color: #CCC2B6;
-        font-family: 'IM Fell English', serif;
+        font-family: "im-feel, sans-serif";
     }
 
     .font2-index {
@@ -6842,11 +8555,11 @@ display: none;
         margin-top: 295px;
         font-size: 26px;
         color: #CCC2B6;
-        font-family: 'IM Fell English', serif;
+        font-family: "im-feel, sans-serif";
     }
 
     #oferta {
-        display: flex;
+        display: flex;        font-family: "im-feel-talic, sans-serif";
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
@@ -6902,8 +8615,7 @@ display: none;
 
 
     #dziejesie {
-        font-family: 'IM FELL English';
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 43px;
         line-height: 113.4%;
@@ -7078,7 +8790,7 @@ display: none;
     }
 
     .opis {
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -7099,7 +8811,7 @@ display: none;
         border: 1px solid rgb(255, 255, 255);
         display: inline-block;
         cursor: pointer;
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 700;
         font-size: 16px;
@@ -7178,13 +8890,33 @@ display: none;
 
 }
 
-// XX-Large devices (larger desktops, 1400px and up)
+
 @media screen and (min-width: 1400px) {
 
+    #scrollToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        opacity: 70%;
+      }
+      
+      #scrollToTopBtn:hover {
+        background-color: #444;
+      }
     body {
         background-image: url(../images/design/page-bg.png);
         color: black;
-        font-family: 'Anonymous Pro', serif;
+        font-family: $any-pro;
     }
 
     // wysoki kontrast strony
@@ -7279,7 +9011,7 @@ display: none;
 
     #img-if1k {
         padding-left: 50px;
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -7308,7 +9040,7 @@ display: none;
 
     #img-if1 {
         padding: 80px;
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -7346,8 +9078,7 @@ display: none;
             transform: translate(-50%, -50%);
             top: 13%;
             left: 50%;
-            font-family: 'IM FELL English';
-            font-style: italic;
+            font-family: "im-feel-talic, sans-serif";
             font-weight: 400;
             font-size: 42px;
             line-height: 100%;
@@ -7378,8 +9109,7 @@ display: none;
         transform: translate(-50%, -50%);
         top: 20%;
         left: 50%;
-        font-family: 'IM FELL English';
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 42px;
         line-height: 100%;
@@ -7538,7 +9268,7 @@ display: none;
         }
 
         p {
-            font-family: 'Anonymous Pro';
+        font-family: $any-pro;
             font-style: normal;
             font-weight: 400;
             padding-top: 24px;
@@ -7556,7 +9286,7 @@ display: none;
     }
 
     .opis-zwiedzanie {
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -7572,7 +9302,7 @@ display: none;
     }
 
     #zwiedzanie {
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 70px;
         line-height: 113.4%;
@@ -7613,7 +9343,7 @@ display: none;
 
         p {
             padding: 15px;
-            font-family: 'Anonymous Pro';
+        font-family: $any-pro;
             font-style: normal;
             font-weight: 400;
             font-size: 18px;
@@ -7636,8 +9366,7 @@ display: none;
             top: 21%;
             padding: 30px;
             left: 50%;
-            font-family: 'IM FELL English';
-            font-style: italic;
+            font-family: "im-feel-talic, sans-serif";
             font-weight: 400;
             font-size: 42px;
             line-height: 100%;
@@ -7658,8 +9387,7 @@ display: none;
             top: 13%;
             padding: 30px;
             left: 50%;
-            font-family: 'IM FELL English';
-            font-style: italic;
+            font-family: "im-feel-talic, sans-serif";
             font-weight: 400;
             font-size: 42px;
             line-height: 100%;
@@ -7713,7 +9441,7 @@ display: none;
     // }
     #kontakt-opis {
 
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -7847,12 +9575,10 @@ display: none;
     }
 
     .font-im1 {
-        font-family: "IM Fell English";
-        src: url("/fonts/IMFellEnglish-Regular.ttf") format("truetype");
-        unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F;
+        font-family: "im-feel-talic, sans-serif";
         font-size: 110px;
         color: #BC8417;
-        font-style: italic;
+
         letter-spacing: -1.5px;
     }
 
@@ -7860,10 +9586,7 @@ display: none;
         line-height: 61.4%;
         color: black;
         font-size: 174px;
-        letter-spacing: -3px;
-        font-family: "IM Fell English";
-        src: url("/fonts/IMFellEnglish-Regular.ttf") format("truetype");
-        unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F;
+        letter-spacing: -3px;        font-family: "im-feel, sans-serif";
     }
 
     .opis1-index {
@@ -7934,7 +9657,7 @@ display: none;
     .font-im3 {
         font-size: 157px;
         letter-spacing: -1.5px;
-        font-family: 'IM Fell English', serif;
+        font-family: "im-feel, sans-serif";
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 1px #CCC2B6;
         z-index: 10;
@@ -8070,7 +9793,7 @@ display: none;
         margin-top: 240px;
         margin-left: 555px;
         color: #CCC2B6;
-        font-family: 'IM Fell English', serif;
+        font-family: "im-feel, sans-serif";
     }
 
     .font2-index {
@@ -8078,11 +9801,11 @@ display: none;
         margin-top: 295px;
         font-size: 26px;
         color: #CCC2B6;
-        font-family: 'IM Fell English', serif;
+        font-family: "im-feel, sans-serif";
     }
 
     #oferta {
-        display: flex;
+        display: flex;        font-family: "im-feel-talic, sans-serif";
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
@@ -8138,8 +9861,7 @@ display: none;
 
 
     #dziejesie {
-        font-family: 'IM FELL English';
-        font-style: italic;
+        font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 43px;
         line-height: 113.4%;
@@ -8313,7 +10035,7 @@ display: none;
     }
 
     .opis {
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -8333,7 +10055,7 @@ display: none;
         border: 1px solid rgb(255, 255, 255);
         display: inline-block;
         cursor: pointer;
-        font-family: 'Anonymous Pro';
+    font-family: $any-pro;
         font-style: normal;
         font-weight: 700;
         font-size: 18px;
@@ -8420,6 +10142,7 @@ display: none;
     background-color: #333;
     color: #fff;
     text-align: center;
+    z-index: 99999;
   }
   
   #cookie-accept {
@@ -8428,28 +10151,10 @@ display: none;
     padding: 5px 10px;
     border: none;
     cursor: pointer;
+    z-index: 99999;
   }
   
-#scrollToTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: #555;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 4px;
-    opacity: 70%;
-  }
-  
-  #scrollToTopBtn:hover {
-    background-color: #444;
-  }
+
   
 .enlarge {
     font-size: 30px !important;
