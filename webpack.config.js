@@ -81,7 +81,7 @@ module.exports = {
         use: [{
           loader: 'file-loader',
           options: {
-            name: 'img/[contenthash].[ext]'
+            name: 'src/images/content/[name].[ext]',
           }
         }]
       },
