@@ -9,12 +9,15 @@
   url("../fonts/DINPro-Regular.ttf") format("truetype");
   font-style: normal;
 }
+@font-face {
+  font-family: "ann";
+  src: url(../fonts/AnonymousPro-Regular.ttf);
+}
 
 
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
 
-$any-pro: 'Anonymous Pro', monospace;
+$any-pro: "ann";
 $im-fe: 'IM Fell English', serif;
