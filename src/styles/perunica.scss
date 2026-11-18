@@ -1,14 +1,51 @@
 @font-face {
     font-family: "im-feel, sans-serif";
-    src: url(../fonts/IMFellEnglish-Regular.ttf);
+    src: url(../fonts/IMFellEnglish-Regular.woff2) format("woff2");
+    font-display: swap;
 }
 @font-face {
     font-family: "im-feel-talic, sans-serif";
-    src: url(../fonts/IMFellEnglish-Italic.ttf);
+    src: url(../fonts/IMFellEnglish-Italic.woff2) format("woff2");
+    font-display: swap;
 }
 @font-face {
     font-family: "ann";
-    src: url(../fonts/AnonymousPro-Regular.ttf);
+    src: url(../fonts/AnonymousPro-Regular.woff2) format("woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family: "IM Fell English";
+    src: url(../fonts/IMFellEnglish-Regular.woff2) format("woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family: "IM Fell English";
+    src: url(../fonts/IMFellEnglish-Italic.woff2) format("woff2");
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Anonymous Pro";
+    src: url(../fonts/AnonymousPro-Regular.woff2) format("woff2");
+    font-display: swap;
+}
+
+// Preload the common Polish glyphs while keeping the full fonts available for other text.
+$perunica-latin-glyphs: U+0020-007E, U+00A0, U+00A3, U+00A9, U+00AB, U+00B7, U+00BB, U+00C1, U+00C4, U+00C9, U+00CD, U+00D3, U+00DC, U+00DF, U+00E0, U+00E1, U+00E4, U+00E8, U+00E9, U+00ED, U+00F3, U+00FC, U+0104, U+0105, U+0106, U+0107, U+010C, U+010D, U+0118, U+0119, U+0141, U+0142, U+0143, U+0144, U+015A, U+015B, U+0160, U+0161, U+0179, U+017A, U+017B, U+017C, U+017D, U+017E, U+2013, U+2014, U+2018, U+2019, U+201D, U+201E, U+2022, U+2026, U+20AC, U+2212;
+
+@each $family, $style, $font in (
+    ("im-feel, sans-serif", normal, "IMFellEnglish-Regular"),
+    ("im-feel-talic, sans-serif", normal, "IMFellEnglish-Italic"),
+    ("IM Fell English", normal, "IMFellEnglish-Regular"),
+    ("IM Fell English", italic, "IMFellEnglish-Italic")
+) {
+    @font-face {
+        font-family: $family;
+        src: url("../fonts/#{$font}-pl.woff2") format("woff2");
+        font-style: $style;
+        font-display: swap;
+        unicode-range: $perunica-latin-glyphs;
+    }
 }
 
 // X-Small devices (portrait phones, less than 576px)
@@ -51,7 +88,7 @@ html {
 
     header {
         height: 928px;
-        background-image: url(../images/design/perun.jpg);
+        background-image: url(../images/design/perun.webp);
         background-repeat: no-repeat;
         background-position: center;
 
@@ -326,7 +363,7 @@ html {
 
     }
     .bg-kolo {
-        background-image: url(../images/content/bg-kolo2.png);
+        background-image: url(../images/content/bg-kolo2.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;    background-position-x: 51%;
@@ -337,7 +374,7 @@ html {
     }
 
     .bg-info {
-        background-image: url(../images/content/if-bg.png);
+        background-image: url(../images/content/if-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
@@ -431,12 +468,12 @@ display: none;
     }
 
     .info-turystyczna4 {
-        h1 {
+        :is(h1, .heading-line) {
             margin-top: 170px;
         }
     }
 
-    #card {
+    :is(#card, .offer-card) {
         width: 550px;
 
         .card-title {
@@ -501,14 +538,14 @@ display: none;
     }
 
     .info-turystyczna3 {
-        background-image: url(../images/content/bg-if.png);
+        background-image: url(../images/content/bg-if.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 564px;
         display: flex;
         justify-content: center;
 
-        #col-if1 {
+        :is(#col-if1, .info-column) {
             display: none;
         }
 
@@ -518,7 +555,7 @@ display: none;
             justify-content: flex-start;
             align-items: center;
 
-            h1 {
+            :is(h1, .heading-line) {
                 margin-top: 50px;
             }
 
@@ -690,14 +727,14 @@ display: none;
     }
 
     .bg-odkryj {
-        background-image: url(../images/content/odkryj-bg.png);
+        background-image: url(../images/content/odkryj-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
     }
 
     .bg-kulinarny {
-        background-image: url(../images/content/szlak-kul-bg.jpg);
+        background-image: url(../images/content/szlak-kul-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;background-position-x: 50%;
@@ -729,7 +766,7 @@ display: none;
     }
 
     #kul-info {
-        #card-title {
+        :is(#card-title, .offer-card-title) {
             position: absolute;
             transform: translate(-50%, -50%);
             top: 9%;
@@ -750,7 +787,7 @@ display: none;
     }
 
     #kolo-info {
-        #card-title {
+        :is(#card-title, .offer-card-title) {
             position: absolute;
             transform: translate(-50%, -50%);
             top: 5%;
@@ -798,7 +835,7 @@ display: none;
 
 
     .bg-kontakt {
-        background-image: url(../images/content/szlak-bg.jpg);
+        background-image: url(../images/content/szlak-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-x: 23%;
@@ -871,7 +908,7 @@ display: none;
     }
 
     .bg-team {
-        background-image: url(../images/content/team-build.png);
+        background-image: url(../images/content/team-build.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: 49%;
@@ -884,7 +921,7 @@ display: none;
     }
 
     .bg-czarownice {
-        background-image: url(../images/content/czarownice-bg.jpg);
+        background-image: url(../images/content/czarownice-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: 69%;
@@ -968,8 +1005,7 @@ display: none;
         font-size: 57px;
         letter-spacing: -3px;
         font-family: "IM Fell English";
-        src: url("/fonts/IMFellEnglish-Regular.ttf") format("truetype");
-        unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F;
+
     }
 
     .opis1-index {
@@ -1325,7 +1361,7 @@ display: none;
 
 
 
-    #dziejesie {
+    :is(#dziejesie, .heading-primary) {
         font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 43px;
@@ -1454,7 +1490,7 @@ display: none;
 
     #welesowy {
         height: 572px;
-        background-image: url(../images/content/bg-welesowy.jpg);
+        background-image: url(../images/content/bg-welesowy.webp);
 
         img {
             display: none;
@@ -1489,7 +1525,7 @@ display: none;
         text-align: center;
     }
 
-    #talk {
+    :is(#talk, .heading-secondary) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1716,7 +1752,7 @@ display: none;
 
     header {
         height: 928px;
-        background-image: url(../images/design/perun.jpg);
+        background-image: url(../images/design/perun.webp);
         background-repeat: no-repeat;
         background-position: center;
 
@@ -1990,7 +2026,7 @@ display: none;
 
     }
     .bg-kolo {
-        background-image: url(../images/content/bg-kolo2.png);
+        background-image: url(../images/content/bg-kolo2.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;    background-position-x: 51%;
@@ -2001,7 +2037,7 @@ display: none;
     }
 
     .bg-info {
-        background-image: url(../images/content/if-bg.png);
+        background-image: url(../images/content/if-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
@@ -2094,12 +2130,12 @@ display: none;
     }
 
     .info-turystyczna4 {
-        h1 {
+        :is(h1, .heading-line) {
             margin-top: 170px;
         }
     }
 
-    #card {
+    :is(#card, .offer-card) {
         width: 550px;
 
         .card-title {
@@ -2163,14 +2199,14 @@ display: none;
     }
 
     .info-turystyczna3 {
-        background-image: url(../images/content/bg-if.png);
+        background-image: url(../images/content/bg-if.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 564px;
         display: flex;
         justify-content: center;
 
-        #col-if1 {
+        :is(#col-if1, .info-column) {
             display: none;
         }
 
@@ -2180,7 +2216,7 @@ display: none;
             justify-content: flex-start;
             align-items: center;
 
-            h1 {
+            :is(h1, .heading-line) {
                 margin-top: 50px;
             }
 
@@ -2349,14 +2385,14 @@ display: none;
     }
 
     .bg-odkryj {
-        background-image: url(../images/content/odkryj-bg.png);
+        background-image: url(../images/content/odkryj-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
     }
 
     .bg-kulinarny {
-        background-image: url(../images/content/szlak-kul-bg.jpg);
+        background-image: url(../images/content/szlak-kul-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;background-position-x: 46%;
@@ -2388,7 +2424,7 @@ display: none;
     }
 
     #kul-info {
-        #card-title {
+        :is(#card-title, .offer-card-title) {
             position: absolute;
             transform: translate(-50%, -50%);
             top: 21%;
@@ -2409,7 +2445,7 @@ display: none;
     }
 
     #kolo-info {
-        #card-title {
+        :is(#card-title, .offer-card-title) {
             position: absolute;
             transform: translate(-50%, -50%);
             top: 7%;
@@ -2446,7 +2482,7 @@ display: none;
 
 
     .bg-kontakt {
-        background-image: url(../images/content/szlak-bg.jpg);
+        background-image: url(../images/content/szlak-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-x: 58%;
@@ -2519,7 +2555,7 @@ display: none;
     }
 
     .bg-team {
-        background-image: url(../images/content/team-build.png);
+        background-image: url(../images/content/team-build.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: 49%;
@@ -2532,7 +2568,7 @@ display: none;
     }
 
     .bg-czarownice {
-        background-image: url(../images/content/czarownice-bg.jpg);
+        background-image: url(../images/content/czarownice-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: 69%;
@@ -2970,7 +3006,7 @@ display: none;
 
 
 
-    #dziejesie {
+    :is(#dziejesie, .heading-primary) {
         font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 43px;
@@ -3099,7 +3135,7 @@ display: none;
 
     #welesowy {
         height: 572px;
-        background-image: url(../images/content/bg-welesowy.jpg);
+        background-image: url(../images/content/bg-welesowy.webp);
 
         img {
             display: none;
@@ -3134,7 +3170,7 @@ display: none;
         text-align: center;
     }
 
-    #talk {
+    :is(#talk, .heading-secondary) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -3360,7 +3396,7 @@ display: none;
 
     header {
         height: 928px;
-        background-image: url(../images/design/perun.jpg);
+        background-image: url(../images/design/perun.webp);
         background-repeat: no-repeat;
         background-position: center;
 
@@ -3634,7 +3670,7 @@ display: none;
 
     }
     .bg-kolo {
-        background-image: url(../images/content/bg-kolo2.png);
+        background-image: url(../images/content/bg-kolo2.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;    background-position-x: 51%;
@@ -3645,7 +3681,7 @@ display: none;
     }
 
     .bg-info {
-        background-image: url(../images/content/if-bg.png);
+        background-image: url(../images/content/if-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
@@ -3738,12 +3774,12 @@ display: none;
     }
 
     .info-turystyczna4 {
-        h1 {
+        :is(h1, .heading-line) {
             margin-top: 170px;
         }
     }
 
-    #card {
+    :is(#card, .offer-card) {
         width: 550px;
 
         .card-title {
@@ -3807,14 +3843,14 @@ display: none;
     }
 
     .info-turystyczna3 {
-        background-image: url(../images/content/bg-if.png);
+        background-image: url(../images/content/bg-if.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 564px;
         display: flex;
         justify-content: center;
 
-        #col-if1 {
+        :is(#col-if1, .info-column) {
             display: none;
         }
 
@@ -3824,7 +3860,7 @@ display: none;
             justify-content: flex-start;
             align-items: center;
 
-            h1 {
+            :is(h1, .heading-line) {
                 margin-top: 50px;
             }
 
@@ -3993,14 +4029,14 @@ display: none;
     }
 
     .bg-odkryj {
-        background-image: url(../images/content/odkryj-bg.png);
+        background-image: url(../images/content/odkryj-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
     }
 
     .bg-kulinarny {
-        background-image: url(../images/content/szlak-kul-bg.jpg);
+        background-image: url(../images/content/szlak-kul-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;background-position-x: 46%;
@@ -4032,7 +4068,7 @@ display: none;
     }
 
     #kul-info {
-        #card-title {
+        :is(#card-title, .offer-card-title) {
             position: absolute;
             transform: translate(-50%, -50%);
             top: 21%;
@@ -4053,7 +4089,7 @@ display: none;
     }
 
     #kolo-info {
-        #card-title {
+        :is(#card-title, .offer-card-title) {
             position: absolute;
             transform: translate(-50%, -50%);
             top: 7%;
@@ -4090,7 +4126,7 @@ display: none;
 
 
     .bg-kontakt {
-        background-image: url(../images/content/szlak-bg.jpg);
+        background-image: url(../images/content/szlak-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-x: 58%;
@@ -4163,7 +4199,7 @@ display: none;
     }
 
     .bg-team {
-        background-image: url(../images/content/team-build.png);
+        background-image: url(../images/content/team-build.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: 49%;
@@ -4176,7 +4212,7 @@ display: none;
     }
 
     .bg-czarownice {
-        background-image: url(../images/content/czarownice-bg.jpg);
+        background-image: url(../images/content/czarownice-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: 69%;
@@ -4615,7 +4651,7 @@ display: none;
 
 
 
-    #dziejesie {
+    :is(#dziejesie, .heading-primary) {
         font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 43px;
@@ -4744,7 +4780,7 @@ display: none;
 
     #welesowy {
         height: 572px;
-        background-image: url(../images/content/bg-welesowy.jpg);
+        background-image: url(../images/content/bg-welesowy.webp);
 
         img {
             display: none;
@@ -4779,7 +4815,7 @@ display: none;
         text-align: center;
     }
 
-    #talk {
+    :is(#talk, .heading-secondary) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -5025,7 +5061,7 @@ display: none;
 
     header {
         height: 1265.74px;
-        background-image: url(../images/design/perun.jpg);
+        background-image: url(../images/design/perun.webp);
         background-repeat: no-repeat;
         background-position: center;
         background-position-y: bottom;
@@ -5064,7 +5100,7 @@ display: none;
 
     }
     .bg-kolo {
-        background-image: url(../images/content/bg-kolo2.png);
+        background-image: url(../images/content/bg-kolo2.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;    background-position-x: 51%;
@@ -5075,7 +5111,7 @@ display: none;
     }
 
     .bg-info {
-        background-image: url(../images/content/if-bg.png);
+        background-image: url(../images/content/if-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
@@ -5170,12 +5206,12 @@ display: none;
     }
 
     .info-turystyczna4 {
-        h1 {
+        :is(h1, .heading-line) {
             margin-top: 170px;
         }
     }
 
-    #card {
+    :is(#card, .offer-card) {
         width: 550px;
 
         .card-title {
@@ -5239,12 +5275,12 @@ display: none;
     }
 
     .info-turystyczna3 {
-        background-image: url(../images/content/bg-if.png);
+        background-image: url(../images/content/bg-if.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 564px;
 
-        #col-if1 {
+        :is(#col-if1, .info-column) {
             display: none;
         }
 
@@ -5254,7 +5290,7 @@ display: none;
             justify-content: flex-start;
             align-items: center;
 
-            h1 {
+            :is(h1, .heading-line) {
                 margin-top: 50px;
             }
 
@@ -5427,7 +5463,7 @@ display: none;
     }
 
     .bg-odkryj {
-        background-image: url(../images/content/odkryj-bg.png);
+        background-image: url(../images/content/odkryj-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
@@ -5438,7 +5474,7 @@ display: none;
     }
 
     .bg-kulinarny {
-        background-image: url(../images/content/szlak-kul-bg.jpg);
+        background-image: url(../images/content/szlak-kul-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;background-position-x: 31%;
@@ -5470,7 +5506,7 @@ display: none;
     }
 
     #kul-info {
-        #card-title {
+        :is(#card-title, .offer-card-title) {
             position: absolute;
             transform: translate(-50%, -50%);
             top: 21%;
@@ -5491,7 +5527,7 @@ display: none;
     }
 
     #kolo-info {
-        #card-title {
+        :is(#card-title, .offer-card-title) {
             position: absolute;
             transform: translate(-50%, -50%);
             top: 13%;
@@ -5528,7 +5564,7 @@ display: none;
 
 
     .bg-kontakt {
-        background-image: url(../images/content/szlak-bg.jpg);
+        background-image: url(../images/content/szlak-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-x: 47%;
@@ -5601,7 +5637,7 @@ display: none;
     }
 
     .bg-team {
-        background-image: url(../images/content/team-build.png);
+        background-image: url(../images/content/team-build.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: 49%;
@@ -5614,7 +5650,7 @@ display: none;
     }
 
     .bg-czarownice {
-        background-image: url(../images/content/czarownice-bg.jpg);
+        background-image: url(../images/content/czarownice-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: 69%;
@@ -5764,7 +5800,7 @@ display: none;
     main {
         background-color: #0f0c07;
         height: 1051px;
-        background-image: url(../images/content/galazka2-1.png);
+        background-image: url(../images/content/galazka2-1.webp);
         background-position: right;
         background-repeat: no-repeat;
         background-position-y: bottom;
@@ -6051,7 +6087,7 @@ display: none;
 
 
 
-    #dziejesie {
+    :is(#dziejesie, .heading-primary) {
         font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 43px;
@@ -6181,7 +6217,7 @@ display: none;
 
     #welesowy {
         height: 572px;
-        background-image: url(../images/content/bg-welesowy.jpg);
+        background-image: url(../images/content/bg-welesowy.webp);
 
         img {
             max-width: 85%;
@@ -6208,7 +6244,7 @@ display: none;
         text-align: center;
     }
 
-    #talk {
+    :is(#talk, .heading-secondary) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -6425,7 +6461,7 @@ display: none;
 
     header {
         height: 1265.74px;
-        background-image: url(../images/design/perun.jpg);
+        background-image: url(../images/design/perun.webp);
         background-repeat: no-repeat;
         background-position: center;
         background-position-y: bottom;
@@ -6463,7 +6499,7 @@ display: none;
 
     }
     .bg-kolo {
-        background-image: url(../images/content/bg-kolo2.png);
+        background-image: url(../images/content/bg-kolo2.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
@@ -6475,7 +6511,7 @@ display: none;
     }
 
     .bg-info {
-        background-image: url(../images/content/if-bg.png);
+        background-image: url(../images/content/if-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
@@ -6554,12 +6590,12 @@ display: none;
     }
 
     .info-turystyczna4 {
-        h1 {
+        :is(h1, .heading-line) {
             margin-top: 170px;
         }
     }
 
-    #card {
+    :is(#card, .offer-card) {
         width: 550px;
 
         .card-title {
@@ -6623,7 +6659,7 @@ display: none;
     }
 
     .info-turystyczna3 {
-        background-image: url(../images/content/bg-if.png);
+        background-image: url(../images/content/bg-if.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 564px;
@@ -6634,7 +6670,7 @@ display: none;
             justify-content: flex-start;
             align-items: center;
 
-            h1 {
+            :is(h1, .heading-line) {
                 margin-top: 50px;
             }
 
@@ -6808,7 +6844,7 @@ display: none;
     }
 
     .bg-odkryj {
-        background-image: url(../images/content/odkryj-bg.png);
+        background-image: url(../images/content/odkryj-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
@@ -6819,7 +6855,7 @@ display: none;
     }
 
     .bg-kulinarny {
-        background-image: url(../images/content/szlak-kul-bg.jpg);
+        background-image: url(../images/content/szlak-kul-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;background-position-x: 31%;
@@ -6851,7 +6887,7 @@ display: none;
     }
 
     #kul-info {
-        #card-title {
+        :is(#card-title, .offer-card-title) {
             position: absolute;
             transform: translate(-50%, -50%);
             top: 21%;
@@ -6872,7 +6908,7 @@ display: none;
     }
 
     #kolo-info {
-        #card-title {
+        :is(#card-title, .offer-card-title) {
             position: absolute;
             transform: translate(-50%, -50%);
             top: 13%;
@@ -6909,7 +6945,7 @@ display: none;
 
 
     .bg-kontakt {
-        background-image: url(../images/content/szlak-bg.jpg);
+        background-image: url(../images/content/szlak-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-x: 47%;
@@ -6982,7 +7018,7 @@ display: none;
     }
 
     .bg-team {
-        background-image: url(../images/content/team-build.png);
+        background-image: url(../images/content/team-build.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: 49%;
@@ -6994,7 +7030,7 @@ display: none;
     }
 
     .bg-czarownice {
-        background-image: url(../images/content/czarownice-bg.jpg);
+        background-image: url(../images/content/czarownice-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: 69%;
@@ -7132,7 +7168,7 @@ display: none;
     main {
         background-color: #0f0c07;
         height: 1251px;
-        background-image: url(../images/content/galazka2-1.png);
+        background-image: url(../images/content/galazka2-1.webp);
         background-position: right;
         background-repeat: no-repeat;
         background-position-y: bottom;
@@ -7349,7 +7385,7 @@ display: none;
 
 
 
-    #dziejesie {
+    :is(#dziejesie, .heading-primary) {
         font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 43px;
@@ -7471,7 +7507,7 @@ display: none;
 
     #welesowy {
         height: 672px;
-        background-image: url(../images/content/bg-welesowy.jpg);
+        background-image: url(../images/content/bg-welesowy.webp);
     }
 
     .welesowy {
@@ -7494,7 +7530,7 @@ display: none;
         text-align: center;
     }
 
-    #talk {
+    :is(#talk, .heading-secondary) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -7692,7 +7728,7 @@ display: none;
 
     header {
         height: 1265.74px;
-        background-image: url(../images/design/perun.jpg);
+        background-image: url(../images/design/perun.webp);
         background-repeat: no-repeat;
         background-position: center;
         background-position-y: bottom;
@@ -7730,7 +7766,7 @@ display: none;
 
     }
     .bg-kolo {
-        background-image: url(../images/content/bg-kolo2.png);
+        background-image: url(../images/content/bg-kolo2.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
@@ -7741,7 +7777,7 @@ display: none;
     }
 
     .bg-info {
-        background-image: url(../images/content/if-bg.png);
+        background-image: url(../images/content/if-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
@@ -7820,12 +7856,12 @@ display: none;
     }
 
     .info-turystyczna4 {
-        h1 {
+        :is(h1, .heading-line) {
             margin-top: 170px;
         }
     }
 
-    #card {
+    :is(#card, .offer-card) {
         width: 550px;
 
         .card-title {
@@ -7889,7 +7925,7 @@ display: none;
     }
 
     .info-turystyczna3 {
-        background-image: url(../images/content/bg-if.png);
+        background-image: url(../images/content/bg-if.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 564px;
@@ -7900,7 +7936,7 @@ display: none;
             justify-content: flex-start;
             align-items: center;
 
-            h1 {
+            :is(h1, .heading-line) {
                 margin-top: 50px;
             }
 
@@ -8072,7 +8108,7 @@ display: none;
     }
 
     .bg-odkryj {
-        background-image: url(../images/content/odkryj-bg.png);
+        background-image: url(../images/content/odkryj-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
@@ -8083,7 +8119,7 @@ display: none;
     }
 
     .bg-kulinarny {
-        background-image: url(../images/content/szlak-kul-bg.jpg);
+        background-image: url(../images/content/szlak-kul-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;background-position-x: 31%;
@@ -8115,7 +8151,7 @@ display: none;
     }
 
     #kul-info {
-        #card-title {
+        :is(#card-title, .offer-card-title) {
             position: absolute;
             transform: translate(-50%, -50%);
             top: 21%;
@@ -8136,7 +8172,7 @@ display: none;
     }
 
     #kolo-info {
-        #card-title {
+        :is(#card-title, .offer-card-title) {
             position: absolute;
             transform: translate(-50%, -50%);
             top: 13%;
@@ -8173,7 +8209,7 @@ display: none;
 
 
     .bg-kontakt {
-        background-image: url(../images/content/szlak-bg.jpg);
+        background-image: url(../images/content/szlak-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-x: 47%;
@@ -8246,7 +8282,7 @@ display: none;
     }
 
     .bg-team {
-        background-image: url(../images/content/team-build.png);
+        background-image: url(../images/content/team-build.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: 49%;
@@ -8258,7 +8294,7 @@ display: none;
     }
 
     .bg-czarownice {
-        background-image: url(../images/content/czarownice-bg.jpg);
+        background-image: url(../images/content/czarownice-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: 69%;
@@ -8396,7 +8432,7 @@ display: none;
     main {
         background-color: #0f0c07;
         height: 1251px;
-        background-image: url(../images/content/galazka2-1.png);
+        background-image: url(../images/content/galazka2-1.webp);
         background-position: right;
         background-repeat: no-repeat;
         background-position-y: bottom;
@@ -8614,7 +8650,7 @@ display: none;
 
 
 
-    #dziejesie {
+    :is(#dziejesie, .heading-primary) {
         font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 43px;
@@ -8736,7 +8772,7 @@ display: none;
 
     #welesowy {
         height: 672px;
-        background-image: url(../images/content/bg-welesowy.jpg);
+        background-image: url(../images/content/bg-welesowy.webp);
     }
 
     .welesowy {
@@ -8759,7 +8795,7 @@ display: none;
         text-align: center;
     }
 
-    #talk {
+    :is(#talk, .heading-secondary) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -8925,7 +8961,7 @@ display: none;
 
     header {
         height: 1265.74px;
-        background-image: url(../images/design/perun.jpg);
+        background-image: url(../images/design/perun.webp);
         background-repeat: no-repeat;
         background-position: center;
         background-position-y: bottom;
@@ -8982,7 +9018,7 @@ display: none;
 
     }
     .bg-kolo {
-        background-image: url(../images/content/bg-kolo2.png);
+        background-image: url(../images/content/bg-kolo2.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
@@ -8993,7 +9029,7 @@ display: none;
     }
 
     .bg-info {
-        background-image: url(../images/content/if-bg.png);
+        background-image: url(../images/content/if-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
@@ -9065,12 +9101,12 @@ display: none;
     }
 
     .info-turystyczna4 {
-        h1 {
+        :is(h1, .heading-line) {
             margin-top: 170px;
         }
     }
 
-    #card {
+    :is(#card, .offer-card) {
         width: 550px;
 
         .card-title {
@@ -9134,7 +9170,7 @@ display: none;
     }
 
     .info-turystyczna3 {
-        background-image: url(../images/content/bg-if.png);
+        background-image: url(../images/content/bg-if.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 564px;
@@ -9145,7 +9181,7 @@ display: none;
             justify-content: flex-start;
             align-items: center;
 
-            h1 {
+            :is(h1, .heading-line) {
                 margin-top: 50px;
             }
 
@@ -9317,7 +9353,7 @@ display: none;
     }
 
     .bg-odkryj {
-        background-image: url(../images/content/odkryj-bg.png);
+        background-image: url(../images/content/odkryj-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
@@ -9328,7 +9364,7 @@ display: none;
     }
 
     .bg-kulinarny {
-        background-image: url(../images/content/szlak-kul-bg.jpg);
+        background-image: url(../images/content/szlak-kul-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
@@ -9360,7 +9396,7 @@ display: none;
     }
 
     #kul-info {
-        #card-title {
+        :is(#card-title, .offer-card-title) {
             position: absolute;
             transform: translate(-50%, -50%);
             top: 21%;
@@ -9381,7 +9417,7 @@ display: none;
     }
 
     #kolo-info {
-        #card-title {
+        :is(#card-title, .offer-card-title) {
             position: absolute;
             transform: translate(-50%, -50%);
             top: 13%;
@@ -9418,7 +9454,7 @@ display: none;
 
 
     .bg-kontakt {
-        background-image: url(../images/content/szlak-bg.jpg);
+        background-image: url(../images/content/szlak-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
@@ -9496,7 +9532,7 @@ display: none;
     }
 
     .bg-team {
-        background-image: url(../images/content/team-build.png);
+        background-image: url(../images/content/team-build.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: 49%;
@@ -9508,7 +9544,7 @@ display: none;
     }
 
     .bg-czarownice {
-        background-image: url(../images/content/czarownice-bg.jpg);
+        background-image: url(../images/content/czarownice-bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: 69%;
@@ -9646,7 +9682,7 @@ display: none;
     main {
         background-color: #0f0c07;
         height: 1251px;
-        background-image: url(../images/content/galazka2-1.png);
+        background-image: url(../images/content/galazka2-1.webp);
         background-position: right;
         background-repeat: no-repeat;
         background-position-y: bottom;
@@ -9860,7 +9896,7 @@ display: none;
 
 
 
-    #dziejesie {
+    :is(#dziejesie, .heading-primary) {
         font-family: "im-feel-talic, sans-serif";
         font-weight: 400;
         font-size: 43px;
@@ -9981,7 +10017,7 @@ display: none;
 
     #welesowy {
         height: 672px;
-        background-image: url(../images/content/bg-welesowy.jpg);
+        background-image: url(../images/content/bg-welesowy.webp);
     }
 
     .welesowy {
@@ -10004,7 +10040,7 @@ display: none;
         text-align: center;
     }
 
-    #talk {
+    :is(#talk, .heading-secondary) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -10189,7 +10225,7 @@ display: none;
         color: yellow;
     }
 
-    #talk {
+    :is(#talk, .heading-secondary) {
         color: yellow;
     }
 
@@ -10280,7 +10316,7 @@ display: none;
 
     }
 
-    #talk {
+    :is(#talk, .heading-secondary) {
         color: yellow !important;
     }
 
@@ -10317,7 +10353,7 @@ display: none;
         color: yellow;
     }
 
-    #talk {
+    :is(#talk, .heading-secondary) {
         color: yellow;
     }
 

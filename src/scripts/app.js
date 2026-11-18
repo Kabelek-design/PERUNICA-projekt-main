@@ -1,159 +1,106 @@
-// import '../scss/app.scss';
+import contrastWhite from '../images/content/high-contrast-white.png';
+import textWhite from '../images/content/text-size-white.png';
+import lineWhite from '../images/content/line4-c.png';
+import facebookWhite from '../images/content/logo-fb-simple-white.png';
+import instagramWhite from '../images/content/logo-instagram-white.png';
 
-/* Your JS Code goes here */
-
-// remember original settings
-
-
-const perunica = () => 'Perunica version 1.0.1';
-
-// eslint-disable-next-line no-console
-console.log(perunica());
-
-const contrastBtn = document.getElementById("contrast-btn");
-const contrastImg = document.getElementById("contrast-img");
-const textImg = document.getElementById("text-img");
-const lineImg = document.getElementById("linia");
-const lineImg1 = document.getElementById("linia1");
-const fbImg = document.getElementById("fb-img");
-const igImg = document.getElementById("ig-img");
-const lineImg2 = document.getElementById("linia2");
-const fbFooter = document.getElementById("fb-gold");
-const igFooter = document.getElementById("ig-gold");
 const body = document.body;
+const contrastButton = document.getElementById('contrast-btn');
+const textButton = document.getElementById('text-img');
 
+if (contrastButton) {
+  const mobile = window.matchMedia('(max-width: 766px)');
+  const icons = [
+    ['contrast-img', contrastWhite, true],
+    ['text-img', textWhite, true],
+    ['linia', lineWhite],
+    ['linia1', lineWhite],
+    ['linia2', lineWhite],
+    ['fb-img', facebookWhite, true],
+    ['ig-img', instagramWhite, true],
+    ['fb-gold', facebookWhite],
+    ['ig-gold', instagramWhite]
+  ].map(([id, white, onMobile]) => {
+    const element = document.getElementById(id);
+    return element && { element, white, onMobile, original: element.src };
+  }).filter(Boolean);
 
-const savedHighContrast = localStorage.getItem("highContrast");
-if (savedHighContrast === "true") {
-  document.body.classList.add("high-contrast");
-  contrastImg.src = "src/images/content/high-contrast-white.png";
-  textImg.src = "src/images/content/text-size-white.png";
-  lineImg.src = "src/images/content/line4-c.png";
-  lineImg1.src = "src/images/content/line4-c.png";
-  fbImg.src = "src/images/content/logo-fb-simple-white.png";
-  igImg.src = "src/images/content/logo-instagram-white.png";
-  lineImg2.src = "src/images/content/line4-c.png";
-  fbFooter.src = "src/images/content/logo-fb-simple-white.png";
-  igFooter.src = "src/images/content/logo-instagram-white.png";
-}
+  function updateContrast(enabled) {
+    body.classList.toggle('high-contrast', enabled);
+    contrastButton.setAttribute('aria-pressed', String(enabled));
 
-let isHighContrast = savedHighContrast === "true";
-
-contrastBtn.addEventListener("click", function () {
-
-  document.body.classList.toggle("high-contrast");
-
-
-  if (isHighContrast) {
-    contrastImg.src = "src/images/content/high-contrast.png";
-    textImg.src = "src/images/content/text-size.png";
-    lineImg.src = "src/images/content/line4.png";
-    lineImg1.src = "src/images/content/line4.png";
-    fbImg.src = "src/images/content/logo-fb-simple1.png";
-    igImg.src = "src/images/content/logo-instagram1.png";
-    lineImg2.src = "src/images/content/line-1.jpg";
-    fbFooter.src = "src/images/content/logo-fb-simple-gold.png";
-    igFooter.src = "src/images/content/logo-instagram-gold.png";
-    isHighContrast = false;
-  } else {
-    contrastImg.src = "src/images/content/high-contrast-white.png";
-    textImg.src = "src/images/content/text-size-white.png";
-    lineImg.src = "src/images/content/line4-c.png";
-    lineImg1.src = "src/images/content/line4-c.png";
-    fbImg.src = "src/images/content/logo-fb-simple-white.png";
-    igImg.src = "src/images/content/logo-instagram-white.png";
-    lineImg2.src = "src/images/content/line4-c.png";
-    fbFooter.src = "src/images/content/logo-fb-simple-white.png";
-    igFooter.src = "src/images/content/logo-instagram-white.png";
-    isHighContrast = true;
-  }
-
-
-  localStorage.setItem("highContrast", isHighContrast);
-});
-
-
-
-var button = document.getElementById("text-img");
-var paragraphs = document.getElementsByTagName("p");
-
-button.addEventListener("click", function() {
-  for (var i = 0; i < paragraphs.length; i++) {
-    if (paragraphs[i].classList.contains("enlarge")) {
-      paragraphs[i].classList.remove("enlarge");
-    } else {
-      paragraphs[i].classList.add("enlarge");
+    for (const { element, white, onMobile, original } of icons) {
+      const next = enabled || (onMobile && mobile.matches) ? white : original;
+      if (element.getAttribute('src') !== next && element.src !== next) {
+        element.src = next;
+      }
     }
   }
-});
 
-var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-scrollToTopBtn.addEventListener("click", function() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+  updateContrast(localStorage.getItem('highContrast') === 'true');
+  contrastButton.addEventListener('click', event => {
+    event.preventDefault();
+    const enabled = !body.classList.contains('high-contrast');
+    updateContrast(enabled);
+    localStorage.setItem('highContrast', String(enabled));
   });
-});
+  mobile.addEventListener('change', () => updateContrast(body.classList.contains('high-contrast')));
+}
 
-window.addEventListener("scroll", function() {
-  if (window.scrollY > 200) {
-    scrollToTopBtn.style.display = "block";
-  } else {
-    scrollToTopBtn.style.display = "none";
-  }
-});
+if (textButton) {
+  let enlarged = false;
+  textButton.closest('a').addEventListener('click', event => {
+    event.preventDefault();
+    enlarged = !enlarged;
+    document.querySelectorAll('p').forEach(paragraph => paragraph.classList.toggle('enlarge', enlarged));
+  });
+}
 
+const scrollButton = document.getElementById('scrollToTopBtn');
+if (scrollButton) {
+  scrollButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  let wasVisible;
+  const updateScrollButton = () => {
+    const visible = window.scrollY > 200;
+    if (visible !== wasVisible) {
+      scrollButton.style.display = visible ? 'block' : 'none';
+      wasVisible = visible;
+    }
+  };
+  updateScrollButton();
+  window.addEventListener('scroll', updateScrollButton, { passive: true });
+}
 
 const cookieBanner = document.getElementById('cookie-banner');
-const cookieAcceptButton = document.getElementById('cookie-accept');
-
-cookieAcceptButton.addEventListener('click', () => {
-  cookieBanner.style.display = 'none';
-  localStorage.setItem('cookiesAccepted', 'true');
-});
-
-if (localStorage.getItem('cookiesAccepted')) {
-  cookieBanner.style.display = 'none';
-} else {
-  cookieBanner.style.display = 'block';
+const acceptCookies = document.getElementById('cookie-accept');
+if (cookieBanner && acceptCookies) {
+  cookieBanner.hidden = Boolean(localStorage.getItem('cookiesAccepted'));
+  acceptCookies.addEventListener('click', () => {
+    cookieBanner.hidden = true;
+    localStorage.setItem('cookiesAccepted', 'true');
+  });
 }
 
-
-// Pobierz elementy obrazków z nawigacji
-const navImages = document.querySelectorAll('.navbar img');
-
-
-function toggleImageURLs() {
-  if (window.innerWidth < 767) {
-    // Zmiana URL obrazków dla mniejszych ekranów
-    navImages.forEach(image => {
-      if (image.id === 'fb-img') {
-        image.src = 'src/images/content/logo-fb-simple-white.png';
-      } else if (image.id === 'ig-img') {
-        image.src = 'src/images/content/logo-instagram-white.png';
-      } else if (image.id === 'contrast-img') {
-        image.src = 'src/images/content/high-contrast-white.png';
-      } else if (image.id === 'text-img') {
-        image.src = 'src/images/content/text-size-white.png';
-      }
+const feed = document.querySelector('.powr-facebook-feed');
+if (feed) {
+  const loadFeed = () => {
+    document.querySelectorAll('script[data-feed-src]').forEach(placeholder => {
+      const script = document.createElement('script');
+      script.src = placeholder.dataset.feedSrc;
+      if (placeholder.crossOrigin) script.crossOrigin = placeholder.crossOrigin;
+      placeholder.replaceWith(script);
     });
+  };
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        observer.disconnect();
+        loadFeed();
+      }
+    }, { rootMargin: '500px' });
+    observer.observe(feed.parentElement);
   } else {
-    // Przywrócenie oryginalnych URL obrazków dla większych ekranów
-    navImages.forEach(image => {
-      if (image.id === 'fb-img') {
-        image.src = 'src/images/content/logo-fb-simple1.png';
-      } else if (image.id === 'ig-img') {
-        image.src = 'src/images/content/logo-instagram1.png';
-      } else if (image.id === 'contrast-img') {
-        image.src = 'src/images/content/high-contrast.png';
-      } else if (image.id === 'text-img') {
-        image.src = 'src/images/content/text-size.png';
-      }
-    });
+    loadFeed();
   }
 }
-
-// Wywołaj funkcję toggleImageURLs przy załadowaniu strony oraz przy zmianie szerokości okna
-window.addEventListener('load', toggleImageURLs);
-window.addEventListener('resize', toggleImageURLs);
