@@ -71,26 +71,6 @@ if (scrollButton) {
   window.addEventListener('scroll', updateScrollButton, { passive: true });
 }
 
-const cookieBanner = document.getElementById('cookie-banner');
-const acceptCookies = document.getElementById('cookie-accept');
-if (cookieBanner && acceptCookies) {
-  cookieBanner.hidden = Boolean(localStorage.getItem('cookiesAccepted'));
-  acceptCookies.addEventListener('click', () => {
-    cookieBanner.hidden = true;
-    localStorage.setItem('cookiesAccepted', 'true');
-  });
-}
-
-const feed = document.querySelector('.powr-facebook-feed');
-if (feed) {
-  const loadFeed = () => {
-    document.querySelectorAll('script[data-feed-src]').forEach(placeholder => {
-      const script = document.createElement('script');
-      script.src = placeholder.dataset.feedSrc;
-      if (placeholder.crossOrigin) script.crossOrigin = placeholder.crossOrigin;
-      placeholder.replaceWith(script);
-    });
-  };
 
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
