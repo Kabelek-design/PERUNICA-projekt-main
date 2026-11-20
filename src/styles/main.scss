@@ -9,9 +9,6 @@
 /* CSS print */
 @import 'base/print';
 
-/* Fonts */
-@import 'base/fonts';
-
 /* Mixins, helpers and functions */
  @import 'base/mixins';
 
@@ -26,5 +23,34 @@
 
 //@import 'app';
 
-/* Demo Page styles */
+// Preserve the typography of two visual lines inside a single heading.
+.split-heading {
+  display: contents;
+}
+
+.split-heading > :where(span),
+.heading-line {
+  display: block;
+  margin-bottom: 0;
+}
+
+:where(.intrinsic-image) {
+  height: auto;
+}
+
+#cookie-banner[hidden] {
+  display: none;
+}
+
+.offer-card-title {
+  font: inherit;
+}
+
 @import 'perunica';
+
+@media (max-width: 474px) {
+  // The cropped image has the same height and centered artwork as the full background.
+  .home-page > header {
+    background-image: url('../images/design/perun-477.webp');
+  }
+}
